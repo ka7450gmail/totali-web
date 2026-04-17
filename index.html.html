@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Totali Rides — No Tips. Fair Earnings. Better Rides.</title>
+    <meta name="description" content="Book rides with clear, upfront pricing and zero hidden fees. What you see is exactly what you pay—every single time." />
+
+    <!-- AOS Animation Library -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
+
+  <body>
+
+    <!-- ===================== NAVBAR ===================== -->
+    <nav class="navbar" id="navbar">
+      <div class="container navbar__inner">
+
+        <a href="#" class="navbar__logo">
+          <img src="assets/images/logo.png" alt="Totali Rides" class="navbar__logo-img" />
+        </a>
+
+        <ul class="navbar__links" id="navLinks">
+          <li><a href="#faq" class="navbar__link">FAQ</a></li>
+          <li><a href="#" class="navbar__link">Sign up</a></li>
+          <li><a href="#" class="btn btn--outline btn--sm">Sign in</a></li>
+        </ul>
+
+        <button class="navbar__hamburger" id="hamburger" aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+      </div>
+    </nav>
+
+    <!-- ===================== HERO ===================== -->
+    <section class="hero" id="home">
+
+      <!-- Figma-exported city map background -->
+      <img
+        class="hero__map-svg"
+        src="assets/images/hero-map.svg"
+        alt=""
+        aria-hidden="true"
+      />
+
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <span class="badge badge--dot" data-aos="fade-down" data-aos-delay="0">Built for Fairness</span>
+
+          <h1 class="hero__title" data-aos="fade-up" data-aos-delay="100">
+            No Tips. No Surprises.
+            <span class="text-cyan">Just Better Rides.</span>
+          </h1>
+
+          <p class="hero__subtitle" data-aos="fade-up" data-aos-delay="200">
+            Book rides with clear, upfront pricing and zero hidden fees.<br />
+            What you see is exactly what you pay—every single time.
+          </p>
+
+          <!-- Trust stats -->
+          <div class="hero__stats" data-aos="fade-up" data-aos-delay="250">
+            <div class="hero__stat">
+              <span class="hero__stat-value">10k+</span>
+              <span class="hero__stat-label">Riders</span>
+            </div>
+            <span class="hero__stat-divider"></span>
+            <div class="hero__stat">
+              <span class="hero__stat-value">4.9<span class="hero__stat-star">★</span></span>
+              <span class="hero__stat-label">Rating</span>
+            </div>
+            <span class="hero__stat-divider"></span>
+            <div class="hero__stat">
+              <span class="hero__stat-value">$0</span>
+              <span class="hero__stat-label">Hidden Fees</span>
+            </div>
+          </div>
+
+          <div class="hero__cta" data-aos="fade-up" data-aos-delay="300">
+            <a href="#" class="store-btn store-btn--google" aria-label="Get it on Google Play">
+              <svg class="store-btn__icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3.18 23.76c.37.21.8.23 1.2.04l13.1-7.57-2.83-2.83z" fill="#EA4335"/>
+                <path d="M20.54 10.27l-2.9-1.67-3.14 2.8 3.14 3.13 2.91-1.68c.83-.48.83-1.97-.01-2.58z" fill="#FBBC04"/>
+                <path d="M4.38.2C3.98.01 3.55.03 3.18.24 2.45.65 2 1.38 2 2.18v19.64c0 .8.45 1.53 1.18 1.94.37.21.8.23 1.2.04l11.07-11.07z" fill="#4285F4"/>
+                <path d="M15.63 9.18L4.38.2 14.5 10.33z" fill="#34A853"/>
+                <path d="M4.38 23.8l10.12-9.14-1.13-1.13z" fill="#34A853"/>
+              </svg>
+              <span>
+                <small>Get it on</small>
+                <strong>Google Play</strong>
+              </span>
+            </a>
+
+            <a href="#" class="store-btn store-btn--apple" aria-label="Download on the App Store">
+              <svg class="store-btn__icon" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+              </svg>
+              <span>
+                <small>Download on the</small>
+                <strong>App Store</strong>
+              </span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Combined phone mockup exported from Figma as one image -->
+        <div class="hero__phones" data-aos="fade-up" data-aos-delay="400">
+          <!-- Glow orb behind the phones -->
+          <div class="hero__phones-glow" aria-hidden="true"></div>
+          <img
+            src="assets/images/phone-hero-combined.png"
+            alt="App screens showing map and ride details"
+            class="hero__phones-img"
+          />
+          <!-- IMAGE NEEDED: Export both phone mockups together as one PNG from Figma
+               Recommended export: 2x or 3x for sharp display on retina screens -->
+        </div>
+      </div>
+
+      <!-- Scroll indicator -->
+      <a href="#features" class="hero__scroll" aria-label="Scroll to features">
+        <span class="hero__scroll-text">Scroll</span>
+        <span class="hero__scroll-arrow">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 3v10M3 9l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+      </a>
+    </section>
+
+    <!-- ===================== FEATURES ===================== -->
+    <section class="features" id="features">
+      <div class="container features__inner">
+
+        <div class="features__header">
+          <div class="features__header-left" data-aos="fade-right">
+            <span class="badge badge--dark badge--dot">Less Friction. More Control.</span>
+            <h2 class="section-title">
+              Everything You Need for a<br />Better Ride Experience
+            </h2>
+          </div>
+          <p class="features__header-desc" data-aos="fade-left" data-aos-delay="100">
+            From upfront pricing to seamless trip management, every feature is designed to make rides simpler, fairer, and more reliable for everyone.
+          </p>
+        </div>
+
+        <div class="features__cards">
+
+          <div class="feature-card" data-aos="fade-up" data-aos-delay="0">
+            <span class="feature-card__num">01</span>
+            <h3 class="feature-card__title">Upfront Pricing</h3>
+            <p class="feature-card__desc">
+              Know exactly what you'll pay before your ride begins—no surprises, no hidden fees.
+            </p>
+            <div class="feature-card__img">
+              <img src="assets/images/phone-feature-pricing.png" alt="Upfront pricing screen" />
+              <!-- IMAGE NEEDED: App screenshot showing ride pricing/fare screen -->
+            </div>
+          </div>
+
+          <div class="feature-card" data-aos="fade-up" data-aos-delay="150">
+            <span class="feature-card__num">02</span>
+            <h3 class="feature-card__title">No-Tip System</h3>
+            <p class="feature-card__desc">
+              Enjoy a stress-free experience with fair pricing built in—no tipping required.
+            </p>
+            <div class="feature-card__img">
+              <img src="assets/images/phone-feature-notip.png" alt="Ride confirmation screen" />
+              <!-- IMAGE NEEDED: App screenshot showing booking/confirmation screen -->
+            </div>
+          </div>
+
+          <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+            <span class="feature-card__num">03</span>
+            <h3 class="feature-card__title">Fair Driver Earnings</h3>
+            <p class="feature-card__desc">
+              Drivers earn a consistent, transparent share of every ride—ensuring reliability and better service.
+            </p>
+            <div class="feature-card__img">
+              <img src="assets/images/phone-feature-earnings.png" alt="Driver earnings screen" />
+              <!-- IMAGE NEEDED: App screenshot showing driver earnings/My Earnings screen -->
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== THE FAIR DEAL ===================== -->
+    <section class="fair-deal" id="fair-deal">
+      <div class="container fair-deal__inner">
+
+        <div class="fair-deal__header" data-aos="fade-up">
+          <span class="badge badge--dot">Transparent by Design</span>
+          <h2 class="section-title">A Fairer Deal<br />for Everyone</h2>
+          <p class="fair-deal__subtitle">
+            We built Totali around one simple principle: everyone deserves to know exactly what they're getting.
+          </p>
+        </div>
+
+        <div class="fair-deal__cols">
+
+          <div class="fair-deal__col" data-aos="fade-right">
+            <div class="fair-deal__col-header">
+              <span class="fair-deal__icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+              </span>
+              <h3 class="fair-deal__col-title">For Drivers</h3>
+            </div>
+            <div class="fair-deal__stat">
+              <span class="fair-deal__stat-num">70%</span>
+              <span class="fair-deal__stat-label">of every fare kept by you</span>
+            </div>
+            <ul class="fair-deal__list">
+              <li>Keep 70% of every fare — guaranteed</li>
+              <li>No tip dependency — your income is stable</li>
+              <li>Real-time earnings dashboard</li>
+              <li>Flexible hours — drive when you want</li>
+              <li>Fast, transparent weekly payouts</li>
+            </ul>
+          </div>
+
+          <div class="fair-deal__divider" aria-hidden="true">
+            <span class="fair-deal__vs">VS</span>
+          </div>
+
+          <div class="fair-deal__col" data-aos="fade-left" data-aos-delay="100">
+            <div class="fair-deal__col-header">
+              <span class="fair-deal__icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              </span>
+              <h3 class="fair-deal__col-title">For Riders</h3>
+            </div>
+            <div class="fair-deal__stat">
+              <span class="fair-deal__stat-num">$0</span>
+              <span class="fair-deal__stat-label">tip pressure, ever</span>
+            </div>
+            <ul class="fair-deal__list">
+              <li>Upfront pricing — no surprises at the end</li>
+              <li>No tipping pressure — ever</li>
+              <li>No surge pricing on busy nights</li>
+              <li>Clear fare breakdown on every receipt</li>
+              <li>Consistent, quality-matched drivers</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== HOW IT WORKS ===================== -->
+    <section class="steps" id="how-it-works">
+      <div class="container steps__inner">
+
+        <!-- Phone mockup -->
+        <div class="steps__phone" data-aos="fade-right" data-aos-delay="100">
+          <div class="steps__phone-frame">
+            <img src="assets/images/phone-steps.png" alt="App showing location search screen" />
+            <!-- IMAGE NEEDED: App screenshot of the 'Where to?' / location search screen -->
+          </div>
+        </div>
+
+        <!-- Steps content -->
+        <div class="steps__content">
+          <span class="badge badge--dot" data-aos="fade-left">Get Started</span>
+          <h2 class="section-title" data-aos="fade-left" data-aos-delay="100">
+            Start Riding in Just a<br />Few Simple Steps
+          </h2>
+          <p class="steps__subtitle" data-aos="fade-left" data-aos-delay="150">
+            From sign-up to your first ride, everything is designed to be fast, easy, and stress-free.
+          </p>
+
+          <!-- Rider / Driver toggle -->
+          <div class="steps__toggle" data-aos="fade-left" data-aos-delay="200">
+            <button class="steps__toggle-btn active" data-tab="rider">Rider</button>
+            <button class="steps__toggle-btn" data-tab="driver">Driver</button>
+          </div>
+
+          <!-- Rider Steps -->
+          <ol class="steps__list" id="riderSteps" data-aos="fade-left" data-aos-delay="250">
+            <li class="step-item">
+              <span class="step-item__num">01</span>
+              <div>
+                <h4 class="step-item__title">Create Your Account</h4>
+                <p class="step-item__desc">Sign up in minutes using your phone number or email.</p>
+              </div>
+            </li>
+            <li class="step-item">
+              <span class="step-item__num">02</span>
+              <div>
+                <h4 class="step-item__title">Set Your Pickup Location</h4>
+                <p class="step-item__desc">Enter where you are and where you're going—quick and effortless.</p>
+              </div>
+            </li>
+            <li class="step-item">
+              <span class="step-item__num">03</span>
+              <div>
+                <h4 class="step-item__title">Confirm Your Ride</h4>
+                <p class="step-item__desc">View your upfront price and book instantly with no hidden charges.</p>
+              </div>
+            </li>
+            <li class="step-item">
+              <span class="step-item__num">04</span>
+              <div>
+                <h4 class="step-item__title">Enjoy the Ride</h4>
+                <p class="step-item__desc">Sit back and relax while your driver gets you there safely—no tipping needed.</p>
+              </div>
+            </li>
+          </ol>
+
+          <!-- Driver Steps -->
+          <ol class="steps__list hidden" id="driverSteps">
+            <li class="step-item">
+              <span class="step-item__num">01</span>
+              <div>
+                <h4 class="step-item__title">Create Your Driver Account</h4>
+                <p class="step-item__desc">Register with your details, license, and vehicle information.</p>
+              </div>
+            </li>
+            <li class="step-item">
+              <span class="step-item__num">02</span>
+              <div>
+                <h4 class="step-item__title">Complete Verification</h4>
+                <p class="step-item__desc">Pass our background and document check to get approved quickly.</p>
+              </div>
+            </li>
+            <li class="step-item">
+              <span class="step-item__num">03</span>
+              <div>
+                <h4 class="step-item__title">Go Online & Accept Rides</h4>
+                <p class="step-item__desc">Toggle online whenever you're ready and start accepting ride requests.</p>
+              </div>
+            </li>
+            <li class="step-item">
+              <span class="step-item__num">04</span>
+              <div>
+                <h4 class="step-item__title">Get Paid Fairly</h4>
+                <p class="step-item__desc">Earn a transparent, consistent share of every fare—tracked in real time.</p>
+              </div>
+            </li>
+          </ol>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===================== WHY TOTALI ===================== -->
+    <section class="why-us" id="why-us">
+      <div class="container why-us__inner">
+
+        <div class="why-us__header" data-aos="fade-up">
+          <span class="badge badge--dot">Why Totali</span>
+          <h2 class="section-title">Built Different.<br />On Purpose.</h2>
+        </div>
+
+        <div class="why-us__cards">
+
+          <div class="why-card" data-aos="fade-up" data-aos-delay="0">
+            <div class="why-card__icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            </div>
+            <h3 class="why-card__title">No Guilt Tipping</h3>
+            <p class="why-card__desc">Fair pay is baked in. Drivers earn a guaranteed share of every fare — no tips needed to make ends meet.</p>
+          </div>
+
+          <div class="why-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="why-card__icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            </div>
+            <h3 class="why-card__title">Community First</h3>
+            <p class="why-card__desc">We start local and grow responsibly — keeping more money circulating in the communities where every ride happens.</p>
+          </div>
+
+          <div class="why-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="why-card__icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            </div>
+            <h3 class="why-card__title">Radical Transparency</h3>
+            <p class="why-card__desc">Every fare is broken down clearly. No hidden fees, no mystery charges. What you see is exactly what moves.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== FAQ ===================== -->
+    <section class="faq" id="faq">
+      <div class="container faq__inner">
+
+        <!-- FAQ content -->
+        <div class="faq__content">
+          <span class="badge badge--dot" data-aos="fade-right">Got Questions?</span>
+          <h2 class="section-title" data-aos="fade-right" data-aos-delay="100">
+            Everything You<br />Need to Know
+          </h2>
+          <p class="faq__subtitle" data-aos="fade-right" data-aos-delay="150">
+            Find quick answers to common questions about how the platform works, pricing, and what to expect on every ride.
+          </p>
+
+          <div class="accordion" data-aos="fade-right" data-aos-delay="200">
+
+            <div class="accordion__item">
+              <button class="accordion__trigger" aria-expanded="false">
+                <span>How does pricing work?</span>
+                <span class="accordion__icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></span>
+              </button>
+              <div class="accordion__body">
+                <p>You see the full price before you book. The fare is calculated based on distance and time—no surge multipliers, no tips, no surprise charges at the end.</p>
+              </div>
+            </div>
+
+            <div class="accordion__item">
+              <button class="accordion__trigger" aria-expanded="true">
+                <span>Do I really not need to tip?</span>
+                <span class="accordion__icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></span>
+              </button>
+              <div class="accordion__body open">
+                <p>No tipping is required. The fare you see before booking already includes fair compensation for the driver, so there's no need to add anything extra after your ride. This ensures a simple, transparent experience every time.</p>
+              </div>
+            </div>
+
+            <div class="accordion__item">
+              <button class="accordion__trigger" aria-expanded="false">
+                <span>How are drivers selected for my ride?</span>
+                <span class="accordion__icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></span>
+              </button>
+              <div class="accordion__body">
+                <p>Drivers are matched based on proximity, rating, and availability. All drivers go through a thorough background and vehicle verification process before being approved.</p>
+              </div>
+            </div>
+
+            <div class="accordion__item">
+              <button class="accordion__trigger" aria-expanded="false">
+                <span>Can I schedule a ride in advance?</span>
+                <span class="accordion__icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></span>
+              </button>
+              <div class="accordion__body">
+                <p>Yes! You can schedule rides ahead of time from the app. Simply select your pickup time when booking and we'll have a driver ready for you.</p>
+              </div>
+            </div>
+
+            <div class="accordion__item">
+              <button class="accordion__trigger" aria-expanded="false">
+                <span>What happens if I cancel a ride?</span>
+                <span class="accordion__icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></span>
+              </button>
+              <div class="accordion__body">
+                <p>Cancellations within a short window after booking are free. A small cancellation fee may apply if you cancel after a driver has been dispatched to respect their time.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Phone mockup -->
+        <div class="faq__phone" data-aos="fade-left" data-aos-delay="200">
+          <div class="faq__phone-frame">
+            <img src="assets/images/phone-faq-profile.png" alt="App profile screen" />
+            <!-- IMAGE NEEDED: App screenshot of the Profile screen showing menu items -->
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===================== COMPARISON TABLE ===================== -->
+    <section class="comparison" id="comparison">
+      <div class="container comparison__inner">
+
+        <div class="comparison__header" data-aos="fade-up">
+          <span class="badge badge--dot">See the Difference</span>
+          <h2 class="section-title">Totali vs.<br />The Other Apps</h2>
+          <p class="comparison__subtitle">The contrast speaks for itself.</p>
+        </div>
+
+        <div class="comparison__table-wrap" data-aos="fade-up" data-aos-delay="100">
+          <table class="comparison__table">
+            <thead>
+              <tr>
+                <th>Feature</th>
+                <th class="comparison__th--other">Big Apps</th>
+                <th class="comparison__th--us">
+                  <span class="comparison__best">Recommended</span>
+                  Totali
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Upfront pricing before you book</td>
+                <td><span class="comparison__x"></span></td>
+                <td class="comparison__td--us"><span class="comparison__check"></span></td>
+              </tr>
+              <tr>
+                <td>No surge pricing</td>
+                <td><span class="comparison__x"></span></td>
+                <td class="comparison__td--us"><span class="comparison__check"></span></td>
+              </tr>
+              <tr>
+                <td>No tipping required</td>
+                <td><span class="comparison__x"></span></td>
+                <td class="comparison__td--us"><span class="comparison__check"></span></td>
+              </tr>
+              <tr>
+                <td>Driver keeps 70%+ of every fare</td>
+                <td><span class="comparison__x"></span></td>
+                <td class="comparison__td--us"><span class="comparison__check"></span></td>
+              </tr>
+              <tr>
+                <td>Full fare breakdown on receipt</td>
+                <td><span class="comparison__x"></span></td>
+                <td class="comparison__td--us"><span class="comparison__check"></span></td>
+              </tr>
+              <tr>
+                <td>Community-driven growth</td>
+                <td><span class="comparison__x"></span></td>
+                <td class="comparison__td--us"><span class="comparison__check"></span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===================== EARNINGS CALCULATOR ===================== -->
+    <section class="calculator" id="calculator">
+
+      <!-- Atmospheric background -->
+      <div class="calculator__bg" aria-hidden="true">
+        <div class="calculator__orb calculator__orb--1"></div>
+        <div class="calculator__orb calculator__orb--2"></div>
+        <div class="calculator__orb calculator__orb--3"></div>
+      </div>
+
+      <div class="container calculator__inner">
+
+        <div class="calculator__header" data-aos="fade-up">
+          <span class="badge badge--dot">Run the Numbers</span>
+          <h2 class="section-title">See What You<br />Could Earn or Save</h2>
+        </div>
+
+        <div class="calculator__card" data-aos="fade-up" data-aos-delay="100">
+          <div class="calculator__toggle">
+            <button class="calculator__tab active" data-calc="rider">Rider Savings</button>
+            <button class="calculator__tab" data-calc="driver">Driver Earnings</button>
+          </div>
+
+          <!-- Rider panel -->
+          <div class="calculator__panel" id="calcRider">
+            <p class="calculator__label">Rides per week <span class="calculator__val" id="riderRides">3</span></p>
+            <input type="range" class="calculator__slider" id="riderSlider" min="1" max="20" value="3" aria-label="Rides per week" />
+            <p class="calculator__label">Average fare <span class="calculator__val" id="riderFare">$18</span></p>
+            <input type="range" class="calculator__slider" id="riderFareSlider" min="5" max="60" value="18" aria-label="Average fare" />
+            <div class="calculator__result">
+              <span class="calculator__result-label">Monthly savings on tips</span>
+              <span class="calculator__result-value" id="riderResult">$42</span>
+            </div>
+            <p class="calculator__note">Based on the industry-average 18% tip charged on other platforms.</p>
+          </div>
+
+          <!-- Driver panel -->
+          <div class="calculator__panel hidden" id="calcDriver">
+            <p class="calculator__label">Hours per week <span class="calculator__val" id="driverHours">20</span></p>
+            <input type="range" class="calculator__slider" id="driverSlider" min="5" max="60" value="20" aria-label="Hours per week" />
+            <p class="calculator__label">Average fare <span class="calculator__val" id="driverFare">$22</span></p>
+            <input type="range" class="calculator__slider" id="driverFareSlider" min="10" max="80" value="22" aria-label="Average fare" />
+
+            <!-- Payout split bar -->
+            <div class="calculator__split" aria-hidden="true">
+              <div class="calculator__split-bar">
+                <div class="calculator__split-fill" style="width:70%">
+                  <span>You 70%</span>
+                </div>
+                <div class="calculator__split-platform">
+                  <span>Platform 30%</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Totali result -->
+            <div class="calculator__result">
+              <span class="calculator__result-label">Totali monthly earnings &mdash; <strong class="calculator__highlight">44% More Money</strong></span>
+              <span class="calculator__result-value" id="driverResult">$3,311</span>
+            </div>
+
+            <!-- Comparison mini-chart -->
+            <div class="calculator__compare" id="calcCompare">
+              <div class="calculator__compare-row">
+                <span class="calculator__compare-lbl calculator__compare-lbl--totali">Totali</span>
+                <div class="calculator__compare-track">
+                  <div class="calculator__compare-bar calculator__compare-bar--totali" style="width:100%"></div>
+                </div>
+              </div>
+              <div class="calculator__compare-row">
+                <span class="calculator__compare-lbl calculator__compare-lbl--bigapps">Big Apps</span>
+                <div class="calculator__compare-track">
+                  <div class="calculator__compare-bar calculator__compare-bar--bigapps" id="bigappsBar" style="width:69.5%"></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Big Apps result -->
+            <div class="calculator__result calculator__result--bigapps">
+              <span class="calculator__result-label">BIG APPS average 43% PAYOUT</span>
+              <span class="calculator__result-value calculator__result-value--bigapps" id="bigAppsResult">$2,301</span>
+            </div>
+
+            <p class="calculator__note">Estimates based on ~2.5 rides/hour. Totali pays drivers 70%; big-app average is ~43%.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===================== EXPANSION ROADMAP ===================== -->
+    <section class="roadmap" id="roadmap">
+      <div class="container roadmap__inner">
+
+        <div class="roadmap__header" data-aos="fade-up">
+          <span class="badge badge--dot">Coming to Your City</span>
+          <h2 class="section-title">Expanding Across<br />the Country</h2>
+          <p class="roadmap__subtitle">We're rolling out city by city — the right way. Check if Totali is launching near you.</p>
+        </div>
+
+        <div class="roadmap__cities" data-aos="fade-up" data-aos-delay="100">
+
+          <div class="roadmap__city roadmap__city--live">
+            <span class="roadmap__city-dot"></span>
+            <div>
+              <h4 class="roadmap__city-name">Houston, TX</h4>
+              <span class="roadmap__city-status">Live Now</span>
+            </div>
+          </div>
+
+          <div class="roadmap__city roadmap__city--soon">
+            <span class="roadmap__city-dot"></span>
+            <div>
+              <h4 class="roadmap__city-name">Dallas, TX</h4>
+              <span class="roadmap__city-status">Coming Q3 2026</span>
+            </div>
+          </div>
+
+          <div class="roadmap__city roadmap__city--soon">
+            <span class="roadmap__city-dot"></span>
+            <div>
+              <h4 class="roadmap__city-name">Atlanta, GA</h4>
+              <span class="roadmap__city-status">Coming Q4 2026</span>
+            </div>
+          </div>
+
+          <div class="roadmap__city roadmap__city--soon">
+            <span class="roadmap__city-dot"></span>
+            <div>
+              <h4 class="roadmap__city-name">Chicago, IL</h4>
+              <span class="roadmap__city-status">Coming 2027</span>
+            </div>
+          </div>
+
+          <div class="roadmap__city roadmap__city--soon">
+            <span class="roadmap__city-dot"></span>
+            <div>
+              <h4 class="roadmap__city-name">Los Angeles, CA</h4>
+              <span class="roadmap__city-status">Coming 2027</span>
+            </div>
+          </div>
+
+          <div class="roadmap__city roadmap__city--tbd">
+            <span class="roadmap__city-dot"></span>
+            <div>
+              <h4 class="roadmap__city-name">Your City</h4>
+              <span class="roadmap__city-status">Tell us where next →</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CTA ===================== -->
+    <section class="cta">
+      <div class="container cta__inner" data-aos="zoom-in">
+        <span class="badge badge--dark badge--dot">Ready to Ride?</span>
+        <h2 class="cta__title">
+          Experience Rides Without<br />the Guesswork
+        </h2>
+        <p class="cta__subtitle">
+          Join a smarter way to travel with upfront pricing, zero tipping, and a seamless ride experience from start to finish.
+        </p>
+        <div class="cta__btns">
+          <a href="#" class="store-btn store-btn--google" aria-label="Get it on Google Play">
+            <svg class="store-btn__icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3.18 23.76c.37.21.8.23 1.2.04l13.1-7.57-2.83-2.83z" fill="#EA4335"/>
+                <path d="M20.54 10.27l-2.9-1.67-3.14 2.8 3.14 3.13 2.91-1.68c.83-.48.83-1.97-.01-2.58z" fill="#FBBC04"/>
+                <path d="M4.38.2C3.98.01 3.55.03 3.18.24 2.45.65 2 1.38 2 2.18v19.64c0 .8.45 1.53 1.18 1.94.37.21.8.23 1.2.04l11.07-11.07z" fill="#4285F4"/>
+                <path d="M15.63 9.18L4.38.2 14.5 10.33z" fill="#34A853"/>
+                <path d="M4.38 23.8l10.12-9.14-1.13-1.13z" fill="#34A853"/>
+              </svg>
+            <span>
+              <small>Get it on</small>
+              <strong>Google Play</strong>
+            </span>
+          </a>
+          <a href="#" class="store-btn store-btn--apple" aria-label="Download on the App Store">
+            <svg class="store-btn__icon" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+              </svg>
+            <span>
+              <small>Download on the</small>
+              <strong>App Store</strong>
+            </span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== FOUNDER'S LETTER ===================== -->
+    <section class="founder" id="founder">
+      <div class="container founder__inner">
+        <div class="founder__card-wrap" data-aos="fade-up">
+        <div class="founder__card">
+          <span class="badge badge--dot">From the Founder</span>
+          <blockquote class="founder__quote">
+            "I built Totali because I was tired of watching drivers hustle for tips just to survive, and riders feeling awkward at the end of every trip. Rides should be simple — a fair price, a great experience, and nothing left unsaid. That's what we're building here, one city at a time."
+          </blockquote>
+          <div class="founder__sig">
+            <div class="founder__sig-avatar" aria-hidden="true"></div>
+            <div>
+              <p class="founder__sig-name">The Founder</p>
+              <p class="founder__sig-role">CEO &amp; Co-founder, Totali</p>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== WAITLIST ===================== -->
+    <section class="waitlist" id="waitlist">
+      <div class="container waitlist__inner">
+
+        <div class="waitlist__header" data-aos="fade-up">
+          <span class="badge badge--dot">Get Early Access</span>
+          <h2 class="section-title">Be the First to<br />Experience Totali</h2>
+          <p class="waitlist__subtitle">Join the waitlist and get notified the moment Totali launches in your city.</p>
+        </div>
+
+        <div class="waitlist__proof" data-aos="fade-up" data-aos-delay="80">
+          <div class="waitlist__proof-dots">
+            <span></span><span></span><span></span><span></span>
+          </div>
+          <p>Join <strong>3,200+</strong> riders &amp; drivers already on the list</p>
+        </div>
+
+        <form class="waitlist__form" id="waitlistForm" novalidate data-aos="fade-up" data-aos-delay="100">
+          <div class="waitlist__role-toggle">
+            <button type="button" class="waitlist__role-btn active" data-role="rider">I'm a Rider</button>
+            <button type="button" class="waitlist__role-btn" data-role="driver">I'm a Driver</button>
+          </div>
+          <div class="waitlist__fields">
+            <input type="email" class="waitlist__input" placeholder="Enter your email address" required />
+            <button type="submit" class="waitlist__submit">Join Waitlist</button>
+          </div>
+          <p class="waitlist__note">No spam. Unsubscribe any time.</p>
+        </form>
+
+      </div>
+    </section>
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer class="footer">
+      <div class="container footer__top">
+
+        <div class="footer__brand">
+          <a href="#" class="footer__logo">
+            <img src="assets/images/logo.png" alt="Totali Rides" class="footer__logo-img" />
+          </a>
+          <p class="footer__brand-desc">
+            Book rides with clear, upfront pricing and zero hidden fees.
+          </p>
+        </div>
+
+        <nav class="footer__nav">
+          <div class="footer__col">
+            <h5 class="footer__col-title">Features</h5>
+            <ul>
+              <li><a href="#">Driver</a></li>
+              <li><a href="#">Riders</a></li>
+              <li><a href="#">Careers</a></li>
+            </ul>
+          </div>
+          <div class="footer__col">
+            <h5 class="footer__col-title">Support</h5>
+            <ul>
+              <li><a href="#">Help Center</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer__col">
+            <h5 class="footer__col-title">Follow our Socials</h5>
+            <div class="footer__socials">
+              <!-- REPLACE: Update href values with actual social media URLs -->
+              <a href="#" class="footer__social-link" aria-label="Twitter/X">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.741l7.73-8.835L1.254 2.25H8.08l4.259 5.63zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+              </a>
+              <a href="#" class="footer__social-link" aria-label="Instagram">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+              </a>
+              <a href="#" class="footer__social-link" aria-label="Facebook">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+              </a>
+            </div>
+          </div>
+        </nav>
+
+      </div>
+
+      <div class="container footer__bottom">
+        <p class="footer__copy">&copy;2026 Totali, All Rights Reserved</p>
+        <div class="footer__legal">
+          <a href="#">Terms of Use</a>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Cookie Policy</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Main JS -->
+    <script src="js/main.js"></script>
+  </body>
+</html>
