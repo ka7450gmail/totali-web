@@ -2955,3 +2955,16 @@ button {
   color: rgba(255,255,255,0.25);
   letter-spacing: 0.01em;
 }
+/* Targets screens that are 767px wide or smaller (phones) */
+@media screen and (max-width: 767px) {
+  .navbar__logo-img {
+    height: 80px !important; /* Forces the size to 80px on mobile */
+    max-height: none !important; /* Removes any "invisible" height limits */
+    width: auto !important;
+  }
+  
+  .navbar {
+    height: auto !important; /* Allows the header to grow with the logo */
+    padding: 15px 0 !important;
+  }
+}
