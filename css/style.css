@@ -321,10 +321,15 @@ button {
 }
 
 .navbar__logo-img {
-  height: 140px;   
-  width: auto;
-  display: block;
-  object-fit: contain;
+  height: 180px !important;  /* Bigger scale */
+  width: auto !important;
+  display: block !important;
+  margin-top: -10px;        /* Moves logo up slightly if it feels too low */
+  margin-bottom: -10px;     /* Pulls the bottom of the box closer to the logo */
+}
+
+.navbar__inner {
+  gap: 0.5rem !important;   /* This closes the horizontal "empty space" between the logo and buttons */
 }
 
 .navbar__links {
