@@ -321,7 +321,7 @@ button {
 }
 
 .navbar__logo-img {
-  height: 64px;
+  height: 128px;
   width: auto;
   display: block;
   object-fit: contain;
