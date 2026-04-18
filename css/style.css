@@ -2981,3 +2981,27 @@ button {
 main {
   margin-top: 140px !important; /* Adjust this number until the text is fully visible */
 }
+/* 1. Target the link that wraps the logo */
+.navbar__logo {
+    display: flex !important;
+    align-items: center !important;
+    padding: 0 !important;      /* Removes the "100% larger" extra space */
+    margin: 0 !important;
+    height: auto !important;    /* Stops the box from being taller than the logo */
+    line-height: 0 !important;  /* Removes ghost space from text-line height */
+}
+
+/* 2. Tighten the image itself */
+.navbar__logo-img {
+    height: 80px !important;    /* Your desired size */
+    margin: 0 !important;
+    padding: 0 !important;
+    display: block !important;
+}
+
+/* 3. Shrink the entire header height */
+.navbar {
+    min-height: 0 !important;   
+    height: auto !important; 
+    padding: 5px 0 !important;  /* Adjust these 5px to 0px if you want zero gap */
+}
