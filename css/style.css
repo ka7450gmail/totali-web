@@ -2975,3 +2975,9 @@ button {
   display: flex;
   align-items: center;        /* Keeps links centered with the logo */
 }
+/* This pushes the "Hero" section down so the header doesn't cover it */
+#navbar + section, 
+.hero, 
+main {
+  margin-top: 100px !important; /* Adjust this number until the text is fully visible */
+}
