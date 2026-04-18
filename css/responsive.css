@@ -1,0 +1,609 @@
+/* ============================================================
+   No Tips Ride Share — Responsive Stylesheet
+   Mobile-first premium polish
+   Breakpoints:
+     lg  → 992px
+     md  → 768px
+     sm  → 480px
+     xs  → 360px
+   ============================================================ */
+
+
+/* ============================================================
+   BASE (applies at all sizes)
+   ============================================================ */
+
+/* Steps timeline line — centres on 40px circle with 0.5rem left padding */
+.steps__list::before { left: 28px; }
+
+
+/* ============================================================
+   LARGE — 992px and below
+   ============================================================ */
+@media (max-width: 992px) {
+
+  /* ── Features ── */
+  .features__cards {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .feature-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    padding: 1.75rem;
+    align-items: center;
+  }
+
+  .feature-card__img {
+    min-height: 200px;
+    border-radius: var(--radius-md);
+    margin: 0;
+  }
+
+  /* ── Steps ── */
+  .steps__inner {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .steps__phone { order: -1; }
+
+  .steps__phone-frame {
+    width: clamp(220px, 50vw, 300px);
+  }
+
+  .steps__content { max-width: 100%; }
+
+  /* ── FAQ ── */
+  .faq__inner {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .faq__phone { order: -1; }
+
+  .faq__phone-frame {
+    width: clamp(220px, 50vw, 300px);
+  }
+
+  .faq__content { max-width: 100%; }
+}
+
+
+/* ============================================================
+   MEDIUM — 768px and below
+   ============================================================ */
+@media (max-width: 768px) {
+
+  /* ── NAVBAR ── */
+  :root { --nav-height: 72px; }
+  .navbar__logo-img  { height: 48px; }
+  .footer__logo-img  { height: 44px; }
+
+  /* Full-screen slide-down mobile menu */
+  .navbar__links {
+    position: fixed;
+    top: var(--nav-height);
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 1.75rem var(--container-pad) 2rem;
+    gap: 0;
+    background: rgba(10, 10, 12, 0.97);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border-top: 1px solid rgba(255,255,255,0.06);
+    /* Smooth reveal */
+    transform: translateY(-8px);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 0.3s cubic-bezier(0.16,1,0.3,1),
+                opacity   0.25s ease;
+    z-index: 999;
+  }
+
+  .navbar__links.open {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  /* Each nav link — full-width row with generous touch target */
+  .navbar__links li {
+    border-bottom: 1px solid rgba(255,255,255,0.055);
+  }
+
+  .navbar__links li:last-child {
+    border-bottom: none;
+  }
+
+  .navbar__link {
+    display: block;
+    padding: 1rem 0;
+    font-size: 1rem;
+    font-weight: 500;
+    color: rgba(255,255,255,0.82);
+    letter-spacing: 0.01em;
+    transition: color 0.2s ease, padding-left 0.2s ease;
+  }
+
+  .navbar__link:hover {
+    color: var(--color-cyan);
+    padding-left: 6px;
+    opacity: 1;
+  }
+
+  /* Sign-in button — pill style, full width */
+  .navbar__links .btn {
+    margin-top: 1.25rem;
+    padding: 0.9rem 1.5rem;
+    text-align: center;
+    justify-content: center;
+    border-radius: 100px;
+    font-size: 0.95rem;
+    letter-spacing: 0.02em;
+    background: rgba(0, 212, 245, 0.08);
+    border-color: rgba(0, 212, 245, 0.35);
+    color: var(--color-cyan);
+    width: 100%;
+  }
+
+  .navbar__hamburger { display: flex; }
+
+
+  /* ── HERO ── */
+  .hero__inner {
+    gap: 2rem;
+    padding-block: clamp(3.5rem, 9vw, 5rem) 2.5rem;
+  }
+
+  .hero__title {
+    font-size: clamp(1.9rem, 6.5vw, 2.8rem);
+  }
+
+  .hero__subtitle {
+    font-size: 0.9rem;
+  }
+
+  /* Stats — tighter pill */
+  .hero__stats {
+    gap: 0;
+    padding: 9px 16px;
+  }
+
+  .hero__stat { padding-inline: 1rem; }
+
+  .hero__phones { max-width: 480px; }
+
+  /* Hide desktop scroll hint */
+  .hero__scroll { display: none; }
+
+
+  /* ── FEATURES ── */
+  .features__header {
+    flex-direction: column;
+    gap: 0.875rem;
+    margin-bottom: 2rem;
+  }
+
+  .features__header-desc { max-width: 100%; }
+
+  /* Stack feature cards fully on mobile */
+  .features__cards { grid-template-columns: 1fr; }
+
+  .feature-card {
+    grid-template-columns: 1fr;
+    padding-bottom: 0;
+  }
+
+  .feature-card__img {
+    border-radius: var(--radius-md) var(--radius-md) 0 0;
+    min-height: 190px;
+  }
+
+
+  /* ── STEPS ── */
+  .steps { padding-block: clamp(3rem, 7vw, 5rem); }
+
+  .steps__toggle {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .steps__toggle-btn {
+    flex: 1;
+    text-align: center;
+  }
+
+
+  /* ── FAQ ── */
+  .faq { padding-block: clamp(3rem, 7vw, 5rem); }
+
+  .accordion__trigger {
+    font-size: 0.9rem;
+    padding: 1rem;
+  }
+
+  .accordion__body.open {
+    padding: 0 1rem 1rem;
+  }
+
+
+  /* ── CTA ── */
+  .cta__title {
+    font-size: clamp(1.6rem, 5.5vw, 2.2rem);
+  }
+
+  .cta__subtitle {
+    font-size: 0.875rem;
+  }
+
+
+  /* ── FOOTER ── */
+  .footer__top {
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+
+  .footer__brand { max-width: 100%; }
+
+  /* Nav columns in a 2-col grid on tablet */
+  .footer__nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem 1.5rem;
+    width: 100%;
+  }
+
+  .footer__bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .footer__legal { gap: 1rem; }
+}
+
+
+/* ============================================================
+   SMALL — 480px and below
+   ============================================================ */
+@media (max-width: 480px) {
+
+  /* ── NAVBAR ── */
+  :root { --nav-height: 68px; }
+  .navbar__logo-img { height: 44px; }
+  .footer__logo-img { height: 40px; }
+
+  /* ── HERO ── */
+  .hero__inner { gap: 1.75rem; }
+
+  .hero__title {
+    font-size: clamp(1.75rem, 7vw, 2.4rem);
+    letter-spacing: -0.02em;
+  }
+
+  .hero__subtitle {
+    font-size: 0.875rem;
+    /* Remove the <br> effect — let it flow naturally */
+    br { display: none; }
+  }
+
+  /* Stats pill — compact on small phones */
+  .hero__stats {
+    padding: 8px 10px;
+    border-radius: 14px;
+  }
+
+  .hero__stat { padding-inline: 0.75rem; }
+
+  .hero__stat-value { font-size: 0.9rem; }
+
+  .hero__stat-label {
+    font-size: 0.62rem;
+  }
+
+  .hero__phones { max-width: 340px; }
+
+  /* Store buttons — row of 2 on small, not full-width stacked */
+  .hero__cta {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+  }
+
+  .store-btn {
+    justify-content: center;
+    min-width: unset;
+    padding: 10px 12px;
+    gap: 7px;
+  }
+
+  .store-btn span strong { font-size: 0.8rem; }
+  .store-btn span small  { font-size: 0.6rem; }
+
+  .cta__btns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+    width: 100%;
+  }
+
+
+  /* ── FEATURES ── */
+  .features { padding-block: clamp(3rem, 7vw, 4.5rem); }
+
+  .features__header-left .section-title {
+    font-size: clamp(1.5rem, 5.5vw, 2rem);
+  }
+
+  .feature-card {
+    border-radius: var(--radius-md);
+  }
+
+  .feature-card__title { font-size: 1rem; }
+
+
+  /* ── STEPS & FAQ phone frames ── */
+  .steps__phone-frame,
+  .faq__phone-frame {
+    width: clamp(200px, 65vw, 260px);
+    padding: 1.5rem 1.25rem;
+    border-radius: 24px;
+  }
+
+  .step-item__num {
+    width: 32px;
+    height: 32px;
+    font-size: 0.65rem;
+  }
+
+  /* Adjust timeline line for smaller 32px circles (0.5rem pad + 16px radius) */
+  .steps__list::before { left: 24px; }
+
+  .step-item__title { padding-top: 5px; }
+
+
+  /* ── FAQ ── */
+  .faq__phone-frame {
+    width: clamp(200px, 65vw, 260px);
+    padding: 1.5rem 1.25rem;
+  }
+
+  .accordion__trigger { padding: 0.875rem 0; }
+
+
+  /* ── FOOTER ── */
+  /* Stack footer nav to single column on small phones */
+  .footer__nav {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .footer__legal {
+    flex-wrap: wrap;
+    gap: 0.75rem 1.25rem;
+  }
+
+  .footer__copy,
+  .footer__legal a {
+    font-size: 0.75rem;
+  }
+}
+
+
+/* ============================================================
+   EXTRA SMALL — 360px and below
+   ============================================================ */
+@media (max-width: 360px) {
+
+  :root { --nav-height: 66px; }
+  .navbar__logo-img { height: 40px; }
+  .footer__logo-img { height: 36px; }
+
+  .hero__title { font-size: 1.65rem; }
+
+  .section-title { font-size: 1.5rem; }
+
+  /* Stats — hide labels to save space */
+  .hero__stat-label { display: none; }
+
+  .hero__stat-divider { height: 20px; }
+
+  /* Store buttons — stack on very tiny screens */
+  .hero__cta,
+  .cta__btns {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* ============================================================
+   NEW SECTIONS — 992px and below
+   ============================================================ */
+@media (max-width: 992px) {
+
+  /* Fair Deal — 2 col (no divider gap needed) */
+  .fair-deal__cols {
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+  }
+
+  .fair-deal__divider {
+    display: none;
+  }
+
+  .fair-deal__col:first-child {
+    border-radius: var(--radius-lg) 0 0 var(--radius-lg);
+    border-right: none;
+  }
+
+  .fair-deal__col:last-child {
+    border-radius: 0 var(--radius-lg) var(--radius-lg) 0;
+  }
+}
+
+
+/* ============================================================
+   NEW SECTIONS — 768px and below
+   ============================================================ */
+@media (max-width: 768px) {
+
+  /* Fair Deal — full stack, restore corners */
+  .fair-deal__cols {
+    grid-template-columns: 1fr;
+  }
+
+  .fair-deal__divider {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    align-items: center;
+  }
+
+  .fair-deal__divider::before,
+  .fair-deal__divider::after {
+    flex: 1;
+    width: auto;
+    height: 1px;
+    background: linear-gradient(to right, transparent, rgba(0,212,245,0.15), transparent);
+  }
+
+  .fair-deal__vs {
+    margin: 0 1rem;
+  }
+
+  .fair-deal__col:first-child {
+    border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+    border-right: 1px solid var(--color-border);
+    border-bottom: none;
+  }
+
+  .fair-deal__col:last-child {
+    border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+  }
+
+  /* Why Us — stack cards */
+  .why-us__cards {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  /* Roadmap — 2 columns */
+  .roadmap__cities {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* Waitlist — stack input + button, smaller padding */
+  .waitlist__form { padding: 1.75rem; }
+
+  .waitlist__fields {
+    flex-direction: column;
+  }
+
+  .waitlist__input,
+  .waitlist__submit {
+    width: 100%;
+    border-radius: 12px;
+  }
+
+  /* Calculator result — wrap on narrow */
+  .calculator__result {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .calculator__result-value { font-size: 1.6rem; }
+  .calculator__result-value--bigapps { font-size: 1.45rem; }
+  .calculator__compare-lbl { width: 3.8rem; font-size: 0.65rem; }
+}
+
+
+/* ============================================================
+   NEW SECTIONS — 480px and below
+   ============================================================ */
+@media (max-width: 480px) {
+
+  /* Fair Deal stat number */
+  .fair-deal__stat-num { font-size: clamp(1.75rem, 7vw, 2.5rem); }
+
+  /* Roadmap — single column */
+  .roadmap__cities {
+    grid-template-columns: 1fr;
+  }
+
+  /* Comparison table — tighter padding */
+  .comparison__table th,
+  .comparison__table td {
+    padding: 0.75rem 0.875rem;
+    font-size: 0.82rem;
+  }
+
+  /* Calculator toggle — full width */
+  .calculator__toggle {
+    width: 100%;
+  }
+
+  .calculator__tab {
+    flex: 1;
+    text-align: center;
+  }
+
+  /* Waitlist role toggle */
+  .waitlist__role-toggle {
+    width: 100%;
+  }
+
+  .waitlist__role-btn {
+    flex: 1;
+    text-align: center;
+  }
+
+  .waitlist__form {
+    padding: 1.5rem 1.25rem;
+    border-radius: var(--radius-lg);
+  }
+
+  /* Founder */
+  .founder__card-wrap,
+  .founder__card {
+    border-radius: var(--radius-lg);
+  }
+}
+
+
+/* ============================================================
+   TOUCH — disable transform hovers on touch devices
+   ============================================================ */
+@media (hover: none) {
+  .store-btn:hover,
+  .feature-card:hover {
+    transform: none;
+    box-shadow: none;
+  }
+}
+
+
+/* ============================================================
+   REDUCED MOTION
+   ============================================================ */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  [data-aos] {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
