@@ -2979,5 +2979,5 @@ button {
 #navbar + section, 
 .hero, 
 main {
-  margin-top: 100px !important; /* Adjust this number until the text is fully visible */
+  margin-top: 140px !important; /* Adjust this number until the text is fully visible */
 }
