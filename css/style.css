@@ -2958,13 +2958,20 @@ button {
 /* Targets screens that are 767px wide or smaller (phones) */
 @media screen and (max-width: 767px) {
   .navbar__logo-img {
-    height: 80px !important; /* Forces the size to 80px on mobile */
-    max-height: none !important; /* Removes any "invisible" height limits */
-    width: auto !important;
-  }
-  
-  .navbar {
-    height: auto !important; /* Allows the header to grow with the logo */
-    padding: 15px 0 !important;
-  }
+  height: 80px !important; /* Keep your desired size */
+  display: block;         /* Removes weird spacing at the bottom of images */
+  margin: 0 !important;   /* Removes any extra outside spacing */
+}
+
+.navbar {
+  height: auto !important;     /* Let it fit the logo exactly */
+  min-height: 0 !important;   /* Removes any forced "tallness" */
+  padding-top: 5px !important; /* Tiny cushion on top */
+  padding-bottom: 5px !important; /* Tiny cushion on bottom */
+}
+
+.navbar__inner {
+  padding: 0 !important;       /* Removes extra space inside the container */
+  display: flex;
+  align-items: center;        /* Keeps links centered with the logo */
 }
