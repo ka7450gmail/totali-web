@@ -321,7 +321,7 @@ button {
 }
 
 .navbar__logo-img {
-  height: 180px !important;  /* Bigger scale */
+  height: 220px !important;  /* Bigger scale */
   width: auto !important;
   display: block !important;
   margin-top: -10px;        /* Moves logo up slightly if it feels too low */
