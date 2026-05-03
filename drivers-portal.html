@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Driver Portal | Totali</title>
     <style>
+        /* CSS VARIABLES & STYLES (THE PAINT BOOTH) */
         :root {
             --color-bg: #050505;
             --color-cyan: #00d4f5;
@@ -12,25 +13,33 @@
             --color-white: #ffffff;
             --radius-xl: 24px;
         }
-<!-- DRIVER PORTAL TABLE OF CONTENTS -->
-<div style="background: #0c0c0c; border-bottom: 1px solid #1a1a1a; padding: 20px; position: sticky; top: 0; z-index: 1000;">
-    <div style="max-width: 800px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 15px; justify-content: center;">
-        <a href="#founder" style="color: #00d4f5; text-decoration: none; font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;">Founder's Letter</a>
-        <span style="color: #333;">|</span>
-        <a href="#bill-of-rights" style="color: #00d4f5; text-decoration: none; font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;">Bill of Rights</a>
-        <span style="color: #333;">|</span>
-        <a href="#rating" style="color: #00d4f5; text-decoration: none; font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;">Rating System</a>
-        <span style="color: #333;">|</span>
-        <a href="#safety" style="color: #00d4f5; text-decoration: none; font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;">Safety Policy</a>
-        <span style="color: #333;">|</span>
-        <a href="#agreement" style="color: #00d4f5; text-decoration: none; font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;">Service Agreement</a>
-    </div>
-</div>
-        body { background-color: var(--color-bg); margin: 0; font-family: 'Inter', sans-serif; color: var(--color-white); scroll-behavior: smooth; }
 
-        .founder { background: #111111; padding-block: 5rem; display: flex; align-items: center; position: relative; overflow: hidden; border-bottom: 1px solid #222; }
+        body { 
+            background-color: var(--color-bg); 
+            margin: 0; 
+            font-family: 'Inter', sans-serif; 
+            color: var(--color-white); 
+            scroll-behavior: smooth; 
+        }
+
+        /* SECTION STYLING */
+        .founder { 
+            background: #111111; 
+            padding-block: 5rem; 
+            display: flex; 
+            align-items: center; 
+            position: relative; 
+            overflow: hidden; 
+            border-bottom: 1px solid #222; 
+        }
         
-        .founder__inner { max-width: 800px; margin: 0 auto; position: relative; z-index: 1; padding: 20px; }
+        .founder__inner { 
+            max-width: 800px; 
+            margin: 0 auto; 
+            position: relative; 
+            z-index: 1; 
+            padding: 20px; 
+        }
 
         .founder__card-wrap {
             padding: 1px; border-radius: calc(var(--radius-xl) + 1px);
@@ -42,6 +51,7 @@
             border-radius: var(--radius-xl); padding: 4rem; position: relative; overflow: hidden;
         }
 
+        /* PILL HEADER */
         .pill-header { 
             display: inline-flex; align-items: center; gap: 10px; padding: 6px 16px; 
             background: rgba(0, 212, 245, 0.05); border: 1px solid rgba(0, 212, 245, 0.2); 
@@ -49,95 +59,107 @@
         }
         .dot-small { width: 8px; height: 8px; background-color: var(--color-cyan); border-radius: 50%; box-shadow: 0 0 10px var(--color-cyan); }
 
+        /* TYPOGRAPHY */
         h1 { font-size: 2.5rem; margin: 0 0 30px 0; text-transform: uppercase; font-weight: 800; line-height: 1.1; }
         .content-body { color: rgba(255,255,255,0.85); font-size: 1.1rem; line-height: 1.8; text-align: justify; }
         .content-body p { margin-bottom: 25px; }
 
+        /* SIGNATURES */
         .sig-block { display: flex; align-items: center; gap: 1.5rem; margin-top: 50px; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.07); }
         .dot-large { width: 48px; height: 48px; border-radius: 50%; background: linear-gradient(135deg, var(--color-cyan), #0098b8); flex-shrink: 0; box-shadow: 0 0 0 2px var(--color-bg), 0 0 0 4px rgba(0,212,245,0.25); }
         .sig-name { font-weight: 800; font-size: 1rem; color: var(--color-white); letter-spacing: -0.01em; margin-bottom: 0.2rem; }
         .sig-role { color: rgba(255,255,255,0.6); font-size: 0.85rem; }
 
+        /* LISTS */
         .policy-list { list-style: none; padding: 0; margin-top: 20px; }
         .policy-list li { margin-bottom: 15px; padding-left: 30px; position: relative; }
         .policy-list li::before { content: '✔'; color: var(--color-cyan); position: absolute; left: 0; font-weight: bold; }
 
-        .btn-download { background: var(--color-cyan); color: #000; padding: 1rem 2.5rem; border-radius: 50px; text-decoration: none; font-weight: 800; text-transform: uppercase; display: inline-block; margin-top: 40px; transition: 0.3s; }
-        .btn-download:hover { box-shadow: 0 0 20px var(--color-cyan); transform: scale(1.05); }
+        /* BUTTONS */
+        .btn-download { background: var(--color-cyan); color: #000; padding: 1rem 2.5rem; border-radius: 50px; text-decoration: none; font-weight: 800; text-transform: uppercase; display: inline-block; margin-top: 40px; transition: 0.3s; border: none; cursor: pointer; }
+        .btn-download:hover { box-shadow: 0 0 20px var(--color-cyan); transform: scale(1.02); }
     </style>
 </head>
+
 <body>
 
-<!-- SECTION 1: FULL FOUNDER'S LETTER (RESTORED TEXT) -->
-<section class="founder">
-    <div class="founder__inner">
-        <div class="founder__card-wrap">
-            <div class="founder__card">
-                <div class="pill-header">
-                    <div class="dot-small"></div>
-                    <span style="color: var(--color-cyan); font-weight: 700; text-transform: uppercase; letter-spacing: 2px; font-size: 0.75rem;">From The Founder</span>
-                </div>
-                <h1>The <span style="color: var(--color-green);">70/30</span> Revolution.</h1>
-                <div class="content-body">
-                    <p>To the Drivers of London and the Ontario Rideshare Community,</p>
-                    <p>When we sat down to build a <strong>No Tips Rideshare™</strong>, we didn't start with an app—we started with a calculator.</p>
-                    <p>For years, the rideshare industry has operated on a model that feels increasingly broken. Drivers are squeezed by rising costs and shrinking percentages, often relying on the uncertainty of tips just to break even. Meanwhile, riders face "tip fatigue" and social pressure every time they reach their destination.</p>
-                    
-                    <p style="border-left: 3px solid var(--color-cyan); padding-left: 20px; font-style: italic; color: #eee;">"We knew there had to be a better way: Better Math."</p>
-                    
-                    <p>We founded this company on a single, unwavering principle: <strong style="color: var(--color-green);">The 70/30 Advantage™</strong>. By capping our platform fee at 30%, we ensure that you, the person behind the wheel—the Independent Contractor, the local professional—incurring the majority of the expenses, can earn a fair, predictable, and dignified share of every fare.</p>
-                    
-                    <p>Because you, our drivers are paid fairly from the start, we’ve been able to do something radical for our riders: <strong>We’ve removed tipping entirely from the Apps.</strong> When they ride with us, the price they see is the total price they pay. No math, no pressure, just the ride. We call it <span style="color: var(--color-cyan);">Zero-Friction Travel</span>.</p>
-                    
-                    <p>We are launching here in <strong>London</strong> on July 1st because this is our home. As we expand across Waterloo Region, Niagara Region, Hamilton, and Windsor through 2027, our mission remains the same: to prove that a rideshare company can be both a sophisticated platform and a fair local partner.</p>
-                </div>
+    <!-- STICKY TABLE OF CONTENTS -->
+    <nav style="background: #0c0c0c; border-bottom: 1px solid #1a1a1a; padding: 20px; position: sticky; top: 0; z-index: 1000;">
+        <div style="max-width: 800px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 15px; justify-content: center; align-items: center;">
+            <a href="#founder" style="color: #00d4f5; text-decoration: none; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;">Founder's Letter</a>
+            <span style="color: #333;">|</span>
+            <a href="#bill-of-rights" style="color: #00d4f5; text-decoration: none; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;">Bill of Rights</a>
+            <span style="color: #333;">|</span>
+            <a href="#rating" style="color: #00d4f5; text-decoration: none; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;">Rating System</a>
+            <span style="color: #333;">|</span>
+            <a href="#safety" style="color: #00d4f5; text-decoration: none; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;">Safety Policy</a>
+            <span style="color: #333;">|</span>
+            <a href="#agreement" style="color: #00d4f5; text-decoration: none; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;">Service Agreement</a>
+        </div>
+    </nav>
 
-                <div class="sig-block">
-                    <div class="dot-large"></div>
-                    <div>
-                        <div class="sig-name">The Founder</div>
-                        <div class="sig-role">CEO & Co-founder, Totali</div>
+    <!-- SECTION 1: FOUNDER'S LETTER -->
+    <section class="founder" id="founder">
+        <div class="founder__inner">
+            <div class="founder__card-wrap">
+                <div class="founder__card">
+                    <div class="pill-header">
+                        <div class="dot-small"></div>
+                        <span style="color: var(--color-cyan); font-weight: 700; text-transform: uppercase; letter-spacing: 2px; font-size: 0.75rem;">From The Founder</span>
                     </div>
+                    <h1>The <span style="color: var(--color-green);">70/30</span> Revolution.</h1>
+                    <div class="content-body">
+                        <p>To the Drivers of London and the Ontario Rideshare Community,</p>
+                        <p>When we sat down to build a <strong>No Tips Rideshare™</strong>, we didn't start with an app—we started with a calculator.</p>
+                        <p>For years, the industry has relied on the uncertainty of tips. Drivers are squeezed by rising costs and shrinking percentages. Meanwhile, riders face "tip fatigue" and social pressure.</p>
+                        <p style="border-left: 3px solid var(--color-cyan); padding-left: 20px; font-style: italic; color: #eee;">"We knew there had to be a better way: Better Math."</p>
+                        <p>We founded this company on a single, unwavering principle: <strong style="color: var(--color-green);">The 70/30 Advantage™</strong>. By capping our platform fee at 30%, we ensure that you, the Independent Contractor, earn a fair and dignified share of every fare.</p>
+                        <p>Because you are paid fairly, we’ve removed tipping entirely from the Apps. When they ride with us, the price they see is the total price they pay. We call it <span style="color: var(--color-cyan);">Zero-Friction Travel</span>.</p>
+                        <p>We are launching here in <strong>London</strong> on July 1st because this is our home. Our mission is to prove that a rideshare company can be both a sophisticated platform and a fair local partner.</p>
+                    </div>
+                    <div class="sig-block">
+                        <div class="dot-large"></div>
+                        <div>
+                            <div class="sig-name">The Founder</div>
+                            <div class="sig-role">CEO & Co-founder, Totali</div>
+                        </div>
+                    </div>
+                    <div style="text-align: center;"><a href="#bill-of-rights" class="btn-download" style="background: transparent; border: 1px solid var(--color-cyan); color: var(--color-cyan);">Next: Bill of Rights</a></div>
                 </div>
-
-                <div style="text-align: center;"><a href="#policy" class="btn-download" style="background: transparent; border: 1px solid var(--color-cyan); color: var(--color-cyan);">View Program Policies</a></div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- SECTION 2: POLICY TEMPLATE -->
-<section class="founder" id="policy">
-    <div class="founder__inner">
-        <div class="founder__card-wrap">
-            <div class="founder__card">
-                <div class="pill-header">
-                    <div class="dot-small"></div>
-                    <span style="color: var(--color-cyan); font-weight: 700; text-transform: uppercase; letter-spacing: 2px; font-size: 0.75rem;">Program Details</span>
-                </div>
-                <h1>Our <span style="color: var(--color-cyan);">Commitment</span> To You</h1>
-                <div class="content-body">
-                    <p>This is your template for future policies. Use this paragraph to introduce the specifics of the document below.</p>
-                    <ul class="policy-list">
-                        <li><strong>Fair Pay:</strong> You keep 70% of every fare, every time.</li>
-                        <li><strong>No Tip Pressure:</strong> A seamless experience for you and your riders.</li>
-                        <li><strong>Local Partnership:</strong> Supporting the Ontario driving community first.</li>
-                    </ul>
-                </div>
-
-                <div class="sig-block">
-                    <div class="dot-large"></div>
-                    <div>
-                        <div class="sig-name">Totali Operations</div>
-                        <div class="sig-role">Driver Relations Department</div>
+    <!-- SECTION 2: TEMPLATE FOR OTHER POLICIES (Copy this for Ratings, Safety, etc.) -->
+    <section class="founder" id="bill-of-rights">
+        <div class="founder__inner">
+            <div class="founder__card-wrap">
+                <div class="founder__card">
+                    <div class="pill-header">
+                        <div class="dot-small"></div>
+                        <span style="color: var(--color-cyan); font-weight: 700; text-transform: uppercase; letter-spacing: 2px; font-size: 0.75rem;">Program Details</span>
                     </div>
+                    <h1>Our <span style="color: var(--color-cyan);">Commitment</span> To You</h1>
+                    <div class="content-body">
+                        <p>This is your template. Replace this text with your specific policy draft.</p>
+                        <ul class="policy-list">
+                            <li><strong>Transparency:</strong> You deserve to see exactly how your fare is calculated.</li>
+                            <li><strong>Independence:</strong> You choose when and where you drive.</li>
+                            <li><strong>Fairness:</strong> No hidden fees, just the 70/30 split.</li>
+                        </ul>
+                    </div>
+                    <div class="sig-block">
+                        <div class="dot-large"></div>
+                        <div>
+                            <div class="sig-name">Totali Operations</div>
+                            <div class="sig-role">Driver Relations Department</div>
+                        </div>
+                    </div>
+                    <div style="text-align: center;"><a href="#" class="btn-download">Download Driver App</a></div>
                 </div>
-
-                <div style="text-align: center;"><a href="#" class="btn-download">Download Driver App</a></div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
 </body>
 </html>
