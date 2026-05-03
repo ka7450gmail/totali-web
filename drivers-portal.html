@@ -6,182 +6,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Driver Portal | Totali</title>
     <style>
-        /* CORE REPOSITORY VARIABLES */
         :root {
             --color-bg: #050505;
             --color-cyan: #00d4f5;
             --color-green: #00ff88;
             --color-white: #ffffff;
-            --color-muted: rgba(255,255,255,0.6);
             --radius-xl: 24px;
         }
 
-        body { 
-            background-color: var(--color-bg); 
-            margin: 0; 
-            padding: 0; 
-            font-family: 'Inter', sans-serif;
-            color: var(--color-white);
-        }
+        body { background-color: var(--color-bg); margin: 0; font-family: 'Inter', sans-serif; color: var(--color-white); }
 
-        /* 15. FOUNDER'S LETTER CONTAINER (GITHUB REPO STYLE) */
-        .founder {
-            background: #111111;
-            padding-block: clamp(5rem, 8vw, 8rem);
-            position: relative;
-            overflow: hidden;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-        }
-
+        .founder { background: #111111; padding-block: 5rem; display: flex; align-items: center; min-height: 100vh; position: relative; overflow: hidden; }
+        
+        /* The Atmospheric Cyan Glow */
         .founder::before {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 900px;
-            height: 500px;
-            background: radial-gradient(ellipse, rgba(0,212,245,0.07) 0%, transparent 60%);
+            content: ''; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+            width: 900px; height: 500px; background: radial-gradient(ellipse, rgba(0,212,245,0.07) 0%, transparent 60%);
             pointer-events: none;
         }
 
-        .founder__inner {
-            max-width: 800px;
-            margin: 0 auto;
-            position: relative;
-            z-index: 1;
-            padding: 20px;
-        }
+        .founder__inner { max-width: 800px; margin: 0 auto; position: relative; z-index: 1; padding: 20px; }
 
+        /* The Gradient Border Wrap */
         .founder__card-wrap {
-            padding: 1px;
-            border-radius: calc(var(--radius-xl) + 1px);
+            padding: 1px; border-radius: calc(var(--radius-xl) + 1px);
             background: linear-gradient(135deg, rgba(0,212,245,0.25) 0%, rgba(0,212,245,0.04) 40%, rgba(0,212,245,0.04) 60%, rgba(0,212,245,0.15) 100%);
         }
 
         .founder__card {
             background: linear-gradient(160deg, rgba(255,255,255,0.04) 0%, var(--color-bg) 60%);
-            border-radius: var(--radius-xl);
-            padding: clamp(2.5rem, 5vw, 4rem);
-            position: relative;
-            overflow: hidden;
+            border-radius: var(--radius-xl); padding: 4rem; position: relative; overflow: hidden;
         }
 
-        /* Large quote mark decor */
-        .founder__card::before {
-            content: '\201C';
-            position: absolute;
-            top: -2rem;
-            left: 2rem;
-            font-size: 16rem;
-            font-weight: 900;
-            background: linear-gradient(180deg, rgba(0,212,245,0.08) 0%, transparent 70%);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            line-height: 1;
-            pointer-events: none;
-            font-family: Georgia, serif;
-        }
+        /* --- THE SECTION HEADER (DOT + TITLE) --- */
+        .section-header { display: flex; align-items: center; gap: 10px; margin-bottom: 2rem; }
+        .dot { width: 8px; height: 8px; background-color: var(--color-cyan); border-radius: 50%; box-shadow: 0 0 10px var(--color-cyan); }
+        .section-title { color: var(--color-cyan); font-weight: 700; text-transform: uppercase; letter-spacing: 2px; font-size: 0.85rem; }
 
-        /* Top edge gloss */
-        .founder__card::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 1px;
-            background: linear-gradient(90deg, transparent 5%, rgba(0,212,245,0.4) 50%, transparent 95%);
-        }
-
-        /* TEXT STYLING */
-        .header-memo {
-            color: var(--color-cyan);
-            text-transform: uppercase;
-            font-weight: 900;
-            letter-spacing: 3px;
-            font-size: 0.8rem;
-            margin-bottom: 10px;
-            display: block;
-        }
-
-        h1 {
-            font-size: 2.5rem;
-            margin: 10px 0 30px 0;
-            line-height: 1.1;
-            text-transform: uppercase;
-            font-weight: 800;
-        }
-
-        .content-body {
-            color: rgba(255,255,255,0.85);
-            font-size: 1.1rem;
-            line-height: 1.8;
-        }
-
+        h1 { font-size: 2.5rem; margin: 0 0 30px 0; text-transform: uppercase; font-weight: 800; }
+        .content-body { color: rgba(255,255,255,0.85); font-size: 1.1rem; line-height: 1.8; }
         .content-body p { margin-bottom: 25px; }
 
-        .pull-quote {
-            border-left: 3px solid var(--color-cyan);
-            padding-left: 20px;
-            color: #eee;
-            font-style: italic;
-            margin: 30px 0;
-        }
+        /* Signature and Protocol Stamp */
+        .founder__sig { display: flex; align-items: center; gap: 1rem; margin-top: 50px; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.07); }
+        .founder__sig-avatar { width: 48px; height: 48px; border-radius: 50%; background: linear-gradient(135deg, var(--color-cyan), #0098b8); }
+        .protocol-badge { margin-top: 20px; display: inline-block; border: 1.5px solid var(--color-green); padding: 4px 12px; border-radius: 4px; color: var(--color-green); font-weight: 900; font-size: 0.65rem; text-transform: uppercase; letter-spacing: 1px; transform: rotate(-2deg); }
 
-        /* SIGNATURE SECTION */
-        .founder__sig {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            margin-top: 50px;
-            padding-top: 1.5rem;
-            border-top: 1px solid rgba(255,255,255,0.07);
-        }
-
-        .founder__sig-avatar {
-            width: 48px;
-            height: 48px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, var(--color-cyan), #0098b8);
-            box-shadow: 0 0 0 2px var(--color-bg), 0 0 0 4px rgba(0,212,245,0.25);
-        }
-
-        .sig-name { font-weight: 800; font-size: 0.9rem; }
-        .sig-role { color: var(--color-muted); font-size: 0.8rem; }
-
-        .protocol-badge {
-            margin-top: 20px;
-            display: inline-block;
-            border: 1.5px solid var(--color-green);
-            padding: 4px 12px;
-            border-radius: 4px;
-            color: var(--color-green);
-            font-weight: 900;
-            font-size: 0.65rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            transform: rotate(-2deg);
-        }
-
-        /* ACTION BUTTON */
-        .cta-container { text-align: center; margin-top: 50px; }
-        .btn-download {
-            background: var(--color-cyan);
-            color: #000;
-            padding: 1rem 2.5rem;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 800;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            display: inline-block;
-            transition: 0.3s;
-        }
-        .btn-download:hover { box-shadow: 0 0 25px rgba(0, 212, 245, 0.5); transform: translateY(-2px); }
+        .btn-download { background: var(--color-cyan); color: #000; padding: 1rem 2.5rem; border-radius: 50px; text-decoration: none; font-weight: 800; text-transform: uppercase; display: inline-block; margin-top: 40px; }
     </style>
 </head>
 <body>
@@ -191,38 +62,32 @@
         <div class="founder__card-wrap">
             <div class="founder__card">
                 
-                <span class="header-memo">Official Memo: London Launch</span>
+                <!-- NEW SECTION HEADER -->
+                <div class="section-header">
+                    <div class="dot"></div>
+                    <span class="section-title">From The Founder</span>
+                </div>
+
                 <h1>The <span style="color: var(--color-green);">70/30</span> Revolution.</h1>
                 
                 <div class="content-body">
                     <p>To the Drivers of London and the Ontario Rideshare Community,</p>
                     <p>When we sat down to build a <strong>No Tips Rideshare™</strong>, we didn't start with an app—we started with a calculator.</p>
-                    <p>For years, the rideshare industry has operated on a model that feels increasingly broken. Drivers are squeezed by rising costs and shrinking percentages, often relying on the uncertainty of tips just to break even. Meanwhile, riders face "tip fatigue" and social pressure every time they reach their destination.</p>
-                    
-                    <div class="pull-quote">
-                        "We knew there had to be a better way: Better Math."
-                    </div>
-
-                    <p>We founded this company on a single, unwavering principle: <strong style="color: var(--color-green);">The 70/30 Advantage™</strong>. By capping our platform fee at 30%, we ensure that you, the person behind the wheel—the Independent Contractor, the local professional—incurring the majority of the expenses, can earn a fair, predictable, and dignified share of every fare.</p>
-                    
-                    <p>Because you, our drivers are paid fairly from the start, we’ve been able to do something radical for our riders: <strong>We’ve removed tipping entirely from the Apps.</strong> When they ride with us, the price they see is the total price they pay. No math, no pressure, just the ride. We call it <span style="color: var(--color-cyan);">Zero-Friction Travel</span>.</p>
-                    
-                    <p>We are launching here in <strong>London</strong> on July 1st because this is our home. As we expand across Waterloo Region, Niagara Region, Hamilton, and Windsor through 2027, our mission remains the same: to prove that a rideshare company can be both a sophisticated platform and a fair local partner.</p>
+                    <p>For years, the industry has relied on the uncertainty of tips. Drivers are squeezed by rising costs and shrinking percentages. We knew there had to be a better way: <strong>Better Math.</strong></p>
+                    <p>By capping our platform fee at 30%, we ensure that you, the local professional, earn a fair and dignified share of every fare. We call it <span style="color: var(--color-cyan);">Zero-Friction Travel</span>.</p>
+                    <p>We are launching here in <strong>London</strong> on July 1st because this is our home. Our mission remains to prove that a rideshare company can be both a sophisticated platform and a fair local partner.</p>
                 </div>
 
                 <div class="founder__sig">
                     <div class="founder__sig-avatar"></div>
                     <div>
-                        <div class="sig-name">THE TOTALI TEAM</div>
-                        <div class="sig-role">Founding Partners • London, Ontario</div>
+                        <div style="font-weight: 800; font-size: 0.9rem;">THE TOTALI TEAM</div>
+                        <div style="color: rgba(255,255,255,0.6); font-size: 0.8rem;">Founding Partners • London, Ontario</div>
                     </div>
                 </div>
                 
                 <div class="protocol-badge">70/30 Verified Protocol</div>
-
-                <div class="cta-container">
-                    <a href="https://github.io" class="btn-download">Download Driver App</a>
-                </div>
+                <div style="text-align: center;"><a href="#" class="btn-download">Download Driver App</a></div>
 
             </div>
         </div>
