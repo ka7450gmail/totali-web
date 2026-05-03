@@ -14,20 +14,12 @@
             --radius-xl: 24px;
         }
 
-        body { background-color: var(--color-bg); margin: 0; font-family: 'Inter', sans-serif; color: var(--color-white); }
+        body { background-color: var(--color-bg); margin: 0; font-family: 'Inter', sans-serif; color: var(--color-white); scroll-behavior: smooth; }
 
-        .founder { background: #111111; padding-block: 5rem; display: flex; align-items: center; min-height: 100vh; position: relative; overflow: hidden; }
+        .founder { background: #111111; padding-block: 5rem; display: flex; align-items: center; position: relative; overflow: hidden; border-bottom: 1px solid #222; }
         
-        /* The Atmospheric Cyan Glow */
-        .founder::before {
-            content: ''; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
-            width: 900px; height: 500px; background: radial-gradient(ellipse, rgba(0,212,245,0.07) 0%, transparent 60%);
-            pointer-events: none;
-        }
-
         .founder__inner { max-width: 800px; margin: 0 auto; position: relative; z-index: 1; padding: 20px; }
 
-        /* The Gradient Border Wrap */
         .founder__card-wrap {
             padding: 1px; border-radius: calc(var(--radius-xl) + 1px);
             background: linear-gradient(135deg, rgba(0,212,245,0.25) 0%, rgba(0,212,245,0.04) 40%, rgba(0,212,245,0.04) 60%, rgba(0,212,245,0.15) 100%);
@@ -38,57 +30,70 @@
             border-radius: var(--radius-xl); padding: 4rem; position: relative; overflow: hidden;
         }
 
-        /* --- THE SECTION HEADER (DOT + TITLE) --- */
-        .section-header { display: flex; align-items: center; gap: 10px; margin-bottom: 2rem; }
+        /* PILL HEADER STYLE */
+        .pill-header { 
+            display: inline-flex; align-items: center; gap: 10px; padding: 6px 16px; 
+            background: rgba(0, 212, 245, 0.05); border: 1px solid rgba(0, 212, 245, 0.2); 
+            border-radius: 100px; margin-bottom: 2rem; 
+        }
         .dot { width: 8px; height: 8px; background-color: var(--color-cyan); border-radius: 50%; box-shadow: 0 0 10px var(--color-cyan); }
-        .section-title { color: var(--color-cyan); font-weight: 700; text-transform: uppercase; letter-spacing: 2px; font-size: 0.85rem; }
 
         h1 { font-size: 2.5rem; margin: 0 0 30px 0; text-transform: uppercase; font-weight: 800; }
         .content-body { color: rgba(255,255,255,0.85); font-size: 1.1rem; line-height: 1.8; }
-        .content-body p { margin-bottom: 25px; }
+        
+        /* BULLET LIST STYLE */
+        .policy-list { list-style: none; padding: 0; margin-top: 20px; }
+        .policy-list li { margin-bottom: 15px; padding-left: 30px; position: relative; }
+        .policy-list li::before { content: '✔'; color: var(--color-cyan); position: absolute; left: 0; font-weight: bold; }
 
-        /* Signature and Protocol Stamp */
-        .founder__sig { display: flex; align-items: center; gap: 1rem; margin-top: 50px; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.07); }
-        .founder__sig-avatar { width: 48px; height: 48px; border-radius: 50%; background: linear-gradient(135deg, var(--color-cyan), #0098b8); }
-        .protocol-badge { margin-top: 20px; display: inline-block; border: 1.5px solid var(--color-green); padding: 4px 12px; border-radius: 4px; color: var(--color-green); font-weight: 900; font-size: 0.65rem; text-transform: uppercase; letter-spacing: 1px; transform: rotate(-2deg); }
-
-        .btn-download { background: var(--color-cyan); color: #000; padding: 1rem 2.5rem; border-radius: 50px; text-decoration: none; font-weight: 800; text-transform: uppercase; display: inline-block; margin-top: 40px; }
+        .btn-download { background: var(--color-cyan); color: #000; padding: 1rem 2.5rem; border-radius: 50px; text-decoration: none; font-weight: 800; text-transform: uppercase; display: inline-block; margin-top: 40px; transition: 0.3s; }
+        .btn-download:hover { box-shadow: 0 0 20px var(--color-cyan); transform: scale(1.05); }
     </style>
 </head>
 <body>
 
+<!-- SECTION 1: FOUNDER'S LETTER -->
 <section class="founder">
     <div class="founder__inner">
         <div class="founder__card-wrap">
             <div class="founder__card">
-                
-                <!-- NEW SECTION HEADER -->
-                <div class="section-header">
+                <div class="pill-header">
                     <div class="dot"></div>
-                    <span class="section-title">From The Founder</span>
+                    <span style="color: var(--color-cyan); font-weight: 700; text-transform: uppercase; letter-spacing: 2px; font-size: 0.75rem;">From The Founder</span>
                 </div>
-
                 <h1>The <span style="color: var(--color-green);">70/30</span> Revolution.</h1>
-                
                 <div class="content-body">
                     <p>To the Drivers of London and the Ontario Rideshare Community,</p>
                     <p>When we sat down to build a <strong>No Tips Rideshare™</strong>, we didn't start with an app—we started with a calculator.</p>
-                    <p>For years, the industry has relied on the uncertainty of tips. Drivers are squeezed by rising costs and shrinking percentages. We knew there had to be a better way: <strong>Better Math.</strong></p>
-                    <p>By capping our platform fee at 30%, we ensure that you, the local professional, earn a fair and dignified share of every fare. We call it <span style="color: var(--color-cyan);">Zero-Friction Travel</span>.</p>
-                    <p>We are launching here in <strong>London</strong> on July 1st because this is our home. Our mission remains to prove that a rideshare company can be both a sophisticated platform and a fair local partner.</p>
+                    <p>By capping our platform fee at 30%, we ensure that you earn a fair share. No math, no pressure, just the ride.</p>
                 </div>
+                <div style="text-align: center;"><a href="#policy" class="btn-download" style="background: transparent; border: 1px solid var(--color-cyan); color: var(--color-cyan);">View Policies Below</a></div>
+            </div>
+        </div>
+    </div>
+</section>
 
-                <div class="founder__sig">
-                    <div class="founder__sig-avatar"></div>
-                    <div>
-                        <div style="font-weight: 800; font-size: 0.9rem;">THE TOTALI TEAM</div>
-                        <div style="color: rgba(255,255,255,0.6); font-size: 0.8rem;">Founding Partners • London, Ontario</div>
-                    </div>
+<!-- SECTION 2: POLICY TEMPLATE (BULLET POINTS) -->
+<section class="founder" id="policy">
+    <div class="founder__inner">
+        <div class="founder__card-wrap">
+            <div class="founder__card">
+                <div class="pill-header">
+                    <div class="dot"></div>
+                    <span style="color: var(--color-cyan); font-weight: 700; text-transform: uppercase; letter-spacing: 2px; font-size: 0.75rem;">Driver Bill of Rights</span>
                 </div>
-                
-                <div class="protocol-badge">70/30 Verified Protocol</div>
+                <h1>Our <span style="color: var(--color-cyan);">Commitment</span> To You</h1>
+                <div class="content-body">
+                    <p>We believe in transparency and fairness. Here are the core pillars of our driver agreement:</p>
+                    <ul class="policy-list">
+                        <li><strong>Fair Pay:</strong> You keep 70% of every fare, every time.</li>
+                        <li><strong>No Tip Pressure:</strong> We've removed the awkwardness for you and the rider.</li>
+                        <li><strong>Local Focus:</strong> We are built by Londoners, for Londoners.</li>
+                        <li><strong>Safety First:</strong> Modern tech to keep you protected on the road.</li>
+                        <li><strong>Support:</strong> Real people to help you, not just an automated bot.</li>
+                    </ul>
+                </div>
                 <div style="text-align: center;"><a href="#" class="btn-download">Download Driver App</a></div>
-
             </div>
         </div>
     </div>
@@ -96,3 +101,4 @@
 
 </body>
 </html>
+
