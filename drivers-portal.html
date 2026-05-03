@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,59 +6,159 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Driver Portal | Totali</title>
     <style>
-        :root { --totali-yellow: #ffcc00; --totali-black: #000000; }
-        body { background-color: var(--totali-black); color: #ffffff; font-family: 'Arial', sans-serif; margin: 0; padding: 0; }
+        /* THE ORIGINAL CYAN & GREEN THEME */
+        :root { 
+            --fluorescent-blue: #00f2ff; 
+            --success-green: #00ff88;
+            --totali-black: #000000; 
+            --dark-card: #050505;
+        }
+
+        body { 
+            background-color: var(--totali-black); 
+            color: #ffffff; 
+            font-family: 'Inter', sans-serif; 
+            margin: 0; 
+            padding: 0; 
+            line-height: 1.8;
+        }
         
-        /* Matching the GitHub theme exactly */
-        .letter-container { max-width: 850px; margin: 60px auto; padding: 40px; border: 1px solid #222; border-radius: 8px; background: #0a0a0a; }
-        .accent-bar { width: 60px; height: 4px; background: var(--totali-yellow); margin-bottom: 30px; }
-        .header-memo { color: var(--totali-yellow); text-transform: uppercase; font-weight: bold; letter-spacing: 2px; font-size: 0.9rem; }
-        h1 { font-size: 2.8rem; margin: 15px 0; color: #fff; line-height: 1.1; }
-        .highlight { color: var(--totali-yellow); }
-        .content p { font-size: 1.15rem; line-height: 1.8; color: #cccccc; margin-bottom: 25px; }
-        .quote-box { border-left: 4px solid var(--totali-yellow); padding-left: 20px; font-style: italic; color: #eeeeee; margin: 40px 0; }
+        .letter-container { 
+            max-width: 800px; 
+            margin: 60px auto; 
+            padding: 60px; 
+            background: var(--dark-card); 
+            border: 2px solid var(--fluorescent-blue); 
+            border-radius: 30px; 
+            box-shadow: 0 0 20px rgba(0, 242, 255, 0.15);
+        }
+
+        .header-memo { 
+            color: var(--fluorescent-blue); 
+            text-transform: uppercase; 
+            font-weight: 900; 
+            letter-spacing: 3px; 
+            font-size: 0.8rem; 
+        }
+
+        h1 { 
+            font-size: 2.5rem; 
+            margin: 15px 0; 
+            color: #fff; 
+            line-height: 1.1; 
+            text-transform: uppercase;
+        }
+
+        .green-highlight { color: var(--success-green); }
+        .blue-highlight { color: var(--fluorescent-blue); }
+
+        .content p { 
+            font-size: 1.1rem; 
+            color: #ccc; 
+            margin-bottom: 25px; 
+            text-align: justify;
+        }
+
+        .quote-box { 
+            border-left: 3px solid var(--fluorescent-blue); 
+            padding-left: 20px; 
+            font-style: italic; 
+            color: #eee; 
+            margin: 40px 0; 
+        }
         
-        /* Download CTA - The "Closer" */
-        .cta-box { background: #1a1a1a; padding: 30px; border-radius: 10px; border: 1px solid var(--totali-yellow); text-align: center; margin-top: 50px; }
-        .btn-download { background: var(--totali-yellow); color: #000; padding: 15px 30px; text-decoration: none; font-weight: bold; border-radius: 50px; display: inline-block; font-size: 1.2rem; }
+        /* SIGNATURE */
+        .signature-block {
+            margin-top: 50px;
+            padding: 30px;
+            background: #000;
+            border-radius: 15px;
+            border: 1px solid #222;
+            max-width: 450px;
+        }
+
+        .signature-name {
+            font-family: 'Brush Script MT', cursive;
+            font-size: 2.5rem;
+            color: var(--fluorescent-blue);
+            margin: 0;
+            filter: drop-shadow(0 0 5px rgba(0, 242, 255, 0.3));
+        }
+
+        .protocol-stamp {
+            margin-top: 25px;
+            display: inline-block;
+            border: 1.5px solid var(--success-green);
+            padding: 4px 12px;
+            border-radius: 4px;
+            color: var(--success-green);
+            font-weight: 900;
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            opacity: 0.8;
+            transform: rotate(-2deg);
+        }
+
+        /* DOWNLOAD BOX */
+        .cta-box { 
+            text-align: center; 
+            margin-top: 60px; 
+            padding: 40px;
+            border-top: 1px solid #222;
+        }
+
+        .btn-download { 
+            background: transparent; 
+            color: var(--fluorescent-blue); 
+            padding: 15px 40px; 
+            text-decoration: none; 
+            font-weight: bold; 
+            border: 2px solid var(--fluorescent-blue);
+            border-radius: 50px; 
+            display: inline-block; 
+            font-size: 1.1rem; 
+            transition: 0.3s;
+            box-shadow: 0 0 10px rgba(0, 242, 255, 0.2);
+        }
+
+        .btn-download:hover { 
+            background: var(--fluorescent-blue);
+            color: #000;
+            box-shadow: 0 0 20px rgba(0, 242, 255, 0.5);
+        }
+
     </style>
 </head>
 <body>
 
     <div class="letter-container">
-        <div class="accent-bar"></div>
         <span class="header-memo">Official Memo: London Launch</span>
-        <h1>The <span class="highlight">70/30</span> Revolution.</h1>
+        <h1>The <span class="green-highlight">70/30</span> Revolution.</h1>
+        <div style="width: 50px; height: 2px; background: var(--fluorescent-blue); margin: 15px 0 30px 0;"></div>
 
         <div class="content">
             <p>To the Drivers of London and the Ontario Rideshare Community,</p>
-            
             <p>When we sat down to build a <strong>No Tips Rideshare™</strong>, we didn't start with an app—we started with a calculator.</p>
-            
-            <p>For years, the rideshare industry has operated on a model that feels increasingly broken. Drivers are squeezed by rising costs and shrinking percentages, often relying on the uncertainty of tips just to break even. Meanwhile, riders face "tip fatigue" and social pressure every time they reach their destination.</p>
+            <p>For years, the rideshare industry has operated on a model that feels increasingly broken. Drivers are squeezed by rising costs and shrinking percentages.</p>
 
             <div class="quote-box">
                 "We knew there had to be a better way: Better Math."
             </div>
 
-            <p>We founded this company on a single, unwavering principle: <strong class="highlight">The 70/30 Advantage™</strong>. By capping our platform fee at 30%, we ensure that you, the person behind the wheel—the Independent Contractor, the local professional—can earn a fair, predictable, and dignified share of every fare.</p>
-
-            <p>Because you, our drivers, are paid fairly from the start, we’ve been able to do something radical: <strong>We’ve removed tipping entirely from the Apps.</strong> When riders choose Totali, the price they see is the total price they pay. No math, no pressure, just the ride. We call it <strong class="highlight">Zero-Friction Travel</strong>.</p>
-
-            <p>We are launching here in <strong>London</strong> on July 1st because this is our home. As we expand across Waterloo, Niagara, Hamilton, and Windsor through 2027, our mission remains the same: to prove that a rideshare company can be both a sophisticated platform and a fair local partner.</p>
+            <p>We founded this company on a single, unwavering principle: <strong class="green-highlight">The 70/30 Advantage™</strong>. By capping our platform fee at 30%, we ensure that you earn a fair share of every fare.</p>
+            <p>Because you are paid fairly, we’ve removed tipping entirely. We call it <strong class="blue-highlight">Zero-Friction Travel</strong>.</p>
         </div>
 
-        <!-- Signature Block -->
-        <div style="margin-top: 50px; border-top: 1px solid #333; padding-top: 20px;">
-            <p style="font-family: cursive; font-size: 2rem; color: var(--totali-yellow); margin-bottom: 0;">The Totali Team</p>
-            <p style="font-size: 0.9rem; color: #666; margin-top: 5px;">FOUNDING PARTNERS | LONDON, ONTARIO</p>
+        <div class="signature-block">
+            <p class="signature-name">The Totali Team</p>
+            <p style="margin: 15px 0 0 0; color: white; font-weight: bold; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 2px;">Founding Partners</p>
+            <p style="margin: 5px 0 0 0; color: #666; font-size: 0.8rem;">LONDON, ONTARIO • LAUNCHING JULY 2026</p>
+            <div class="protocol-stamp">70/30 Verified Protocol</div>
         </div>
 
-        <!-- The "Filter" Action - This ensures only serious drivers proceed -->
         <div class="cta-box">
-            <h3 style="color: #fff; margin-top: 0;">Ready to join the 70/30 Revolution?</h3>
-            <p style="color: #ccc;">Download the Driver App now to begin your registration.</p>
-            <a href="INSERT_APP_STORE_LINK_HERE" class="btn-download">DOWNLOAD DRIVER APP</a>
+            <a href="#" class="btn-download">DOWNLOAD DRIVER APP</a>
         </div>
     </div>
 
