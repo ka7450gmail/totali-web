@@ -6,161 +6,189 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Driver Portal | Totali</title>
     <style>
-        /* THE ORIGINAL CYAN & GREEN THEME */
-        :root { 
-            --fluorescent-blue: #00f2ff; 
-            --success-green: #00ff88;
-            --totali-black: #000000; 
-            --dark-card: #050505;
+        /* CORE REPOSITORY VARIABLES */
+        :root {
+            --color-bg: #050505;
+            --color-cyan: #00d4f5;
+            --color-white: #ffffff;
+            --color-muted: rgba(255,255,255,0.6);
+            --radius-xl: 24px;
         }
 
         body { 
-            background-color: var(--totali-black); 
-            color: #ffffff; 
-            font-family: 'Inter', sans-serif; 
+            background-color: var(--color-bg); 
             margin: 0; 
             padding: 0; 
-            line-height: 1.8;
-        }
-        
-        .letter-container { 
-            max-width: 800px; 
-            margin: 60px auto; 
-            padding: 60px; 
-            background: var(--dark-card); 
-            border: 2px solid var(--fluorescent-blue); 
-            border-radius: 30px; 
-            box-shadow: 0 0 20px rgba(0, 242, 255, 0.15);
+            font-family: 'Inter', sans-serif;
         }
 
-        .header-memo { 
-            color: var(--fluorescent-blue); 
-            text-transform: uppercase; 
-            font-weight: 900; 
-            letter-spacing: 3px; 
-            font-size: 0.8rem; 
+        /* 15. FOUNDER'S LETTER (FROM YOUR CSS) */
+        .founder {
+            background: #111111;
+            padding-block: clamp(5rem, 8vw, 8rem);
+            position: relative;
+            overflow: hidden;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
         }
 
-        h1 { 
-            font-size: 2.5rem; 
-            margin: 15px 0; 
-            color: #fff; 
-            line-height: 1.1; 
-            text-transform: uppercase;
+        .founder::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 900px;
+            height: 500px;
+            background: radial-gradient(ellipse, rgba(0,212,245,0.07) 0%, transparent 60%);
+            pointer-events: none;
         }
 
-        .green-highlight { color: var(--success-green); }
-        .blue-highlight { color: var(--fluorescent-blue); }
-
-        .content p { 
-            font-size: 1.1rem; 
-            color: #ccc; 
-            margin-bottom: 25px; 
-            text-align: justify;
+        .founder__inner {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+            padding: 20px;
         }
 
-        .quote-box { 
-            border-left: 3px solid var(--fluorescent-blue); 
-            padding-left: 20px; 
-            font-style: italic; 
-            color: #eee; 
-            margin: 40px 0; 
-        }
-        
-        /* SIGNATURE */
-        .signature-block {
-            margin-top: 50px;
-            padding: 30px;
-            background: #000;
-            border-radius: 15px;
-            border: 1px solid #222;
-            max-width: 450px;
+        .founder__card-wrap {
+            padding: 1px;
+            border-radius: calc(var(--radius-xl) + 1px);
+            background: linear-gradient(135deg, rgba(0,212,245,0.25) 0%, rgba(0,212,245,0.04) 40%, rgba(0,212,245,0.04) 60%, rgba(0,212,245,0.15) 100%);
         }
 
-        .signature-name {
-            font-family: 'Brush Script MT', cursive;
-            font-size: 2.5rem;
-            color: var(--fluorescent-blue);
-            margin: 0;
-            filter: drop-shadow(0 0 5px rgba(0, 242, 255, 0.3));
+        .founder__card {
+            background: linear-gradient(160deg, rgba(255,255,255,0.04) 0%, var(--color-bg) 60%);
+            border-radius: var(--radius-xl);
+            padding: clamp(2.5rem, 5vw, 4rem);
+            position: relative;
+            overflow: hidden;
         }
 
-        .protocol-stamp {
-            margin-top: 25px;
-            display: inline-block;
-            border: 1.5px solid var(--success-green);
-            padding: 4px 12px;
-            border-radius: 4px;
-            color: var(--success-green);
+        /* The Large Quote Mark from your CSS */
+        .founder__card::before {
+            content: '\201C';
+            position: absolute;
+            top: -2rem;
+            left: 2rem;
+            font-size: 16rem;
             font-weight: 900;
-            font-size: 0.65rem;
+            background: linear-gradient(180deg, rgba(0,212,245,0.08) 0%, transparent 70%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            line-height: 1;
+            pointer-events: none;
+            font-family: Georgia, serif;
+        }
+
+        .founder__card::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent 5%, rgba(0,212,245,0.4) 50%, transparent 95%);
+        }
+
+        .founder__quote {
+            font-size: clamp(1rem, 1.8vw, 1.175rem);
+            line-height: 1.85;
+            color: rgba(255,255,255,0.82);
+            font-style: normal; /* Changed from italic for better readability of the letter */
+            border: none;
+            padding: 0;
+            position: relative;
+            z-index: 1;
+            margin-bottom: 2.25rem;
+            letter-spacing: 0.005em;
+        }
+
+        .founder__sig {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            position: relative;
+            z-index: 1;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255,255,255,0.07);
+        }
+
+        .founder__sig-avatar {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--color-cyan), #0098b8);
+            flex-shrink: 0;
+            box-shadow: 0 0 0 2px var(--color-bg), 0 0 0 4px rgba(0,212,245,0.25);
+        }
+
+        .founder__sig-name {
+            font-size: 0.9rem;
+            font-weight: 800;
+            color: var(--color-white);
+            letter-spacing: -0.01em;
+            margin-bottom: 0.2rem;
+        }
+
+        .founder__sig-role {
+            font-size: 0.8rem;
+            color: var(--color-muted);
+        }
+
+        /* THE DOWNLOAD BUTTON (MATCHING SITE STYLE) */
+        .cta-button {
+            display: inline-block;
+            margin-top: 40px;
+            padding: 1rem 2.5rem;
+            background: var(--color-cyan);
+            color: #000;
+            text-decoration: none;
+            font-weight: 800;
+            border-radius: 50px;
             text-transform: uppercase;
             letter-spacing: 1px;
-            opacity: 0.8;
-            transform: rotate(-2deg);
-        }
-
-        /* DOWNLOAD BOX */
-        .cta-box { 
-            text-align: center; 
-            margin-top: 60px; 
-            padding: 40px;
-            border-top: 1px solid #222;
-        }
-
-        .btn-download { 
-            background: transparent; 
-            color: var(--fluorescent-blue); 
-            padding: 15px 40px; 
-            text-decoration: none; 
-            font-weight: bold; 
-            border: 2px solid var(--fluorescent-blue);
-            border-radius: 50px; 
-            display: inline-block; 
-            font-size: 1.1rem; 
             transition: 0.3s;
-            box-shadow: 0 0 10px rgba(0, 242, 255, 0.2);
         }
-
-        .btn-download:hover { 
-            background: var(--fluorescent-blue);
-            color: #000;
-            box-shadow: 0 0 20px rgba(0, 242, 255, 0.5);
+        .cta-button:hover {
+            box-shadow: 0 0 20px rgba(0, 212, 245, 0.4);
+            transform: translateY(-2px);
         }
-
     </style>
 </head>
 <body>
 
-    <div class="letter-container">
-        <span class="header-memo">Official Memo: London Launch</span>
-        <h1>The <span class="green-highlight">70/30</span> Revolution.</h1>
-        <div style="width: 50px; height: 2px; background: var(--fluorescent-blue); margin: 15px 0 30px 0;"></div>
+<section class="founder">
+    <div class="founder__inner">
+        <div class="founder__card-wrap">
+            <div class="founder__card">
+                <div class="founder__quote">
+                    <p style="color: var(--color-cyan); font-weight: bold; margin-bottom: 2rem;">OFFICIAL MEMO: LONDON LAUNCH</p>
+                    <p>To the Drivers of London and the Ontario Rideshare Community,</p>
+                    <p>When we sat down to build a <strong>No Tips Rideshare™</strong>, we didn't start with an app—we started with a calculator.</p>
+                    <p>For years, the rideshare industry has operated on a model that feels increasingly broken. Drivers are squeezed by rising costs and shrinking percentages, often relying on the uncertainty of tips just to break even.</p>
+                    <p>We founded this company on a single, unwavering principle: <strong>The 70/30 Advantage™</strong>. By capping our platform fee at 30%, we ensure that you, the person behind the wheel, can earn a fair and dignified share of every fare.</p>
+                    <p>Because you are paid fairly from the start, we have removed tipping entirely. When they ride with us, the price they see is the total price they pay. No math, no pressure, just the ride.</p>
+                </div>
 
-        <div class="content">
-            <p>To the Drivers of London and the Ontario Rideshare Community,</p>
-            <p>When we sat down to build a <strong>No Tips Rideshare™</strong>, we didn't start with an app—we started with a calculator.</p>
-            <p>For years, the rideshare industry has operated on a model that feels increasingly broken. Drivers are squeezed by rising costs and shrinking percentages.</p>
+                <div class="founder__sig">
+                    <div class="founder__sig-avatar"></div>
+                    <div>
+                        <div class="founder__sig-name">THE TOTALI TEAM</div>
+                        <div class="founder__sig-role">Founding Partners • London, Ontario</div>
+                    </div>
+                </div>
 
-            <div class="quote-box">
-                "We knew there had to be a better way: Better Math."
+                <div style="text-align: center;">
+                    <a href="#" class="cta-button">Download Driver App</a>
+                </div>
             </div>
-
-            <p>We founded this company on a single, unwavering principle: <strong class="green-highlight">The 70/30 Advantage™</strong>. By capping our platform fee at 30%, we ensure that you earn a fair share of every fare.</p>
-            <p>Because you are paid fairly, we’ve removed tipping entirely. We call it <strong class="blue-highlight">Zero-Friction Travel</strong>.</p>
-        </div>
-
-        <div class="signature-block">
-            <p class="signature-name">The Totali Team</p>
-            <p style="margin: 15px 0 0 0; color: white; font-weight: bold; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 2px;">Founding Partners</p>
-            <p style="margin: 5px 0 0 0; color: #666; font-size: 0.8rem;">LONDON, ONTARIO • LAUNCHING JULY 2026</p>
-            <div class="protocol-stamp">70/30 Verified Protocol</div>
-        </div>
-
-        <div class="cta-box">
-            <a href="#" class="btn-download">DOWNLOAD DRIVER APP</a>
         </div>
     </div>
+</section>
 
 </body>
 </html>
