@@ -22,6 +22,57 @@
             scroll-behavior: smooth; 
         }
 
+        /* --- ADDED HERO STYLES TO FIX WHITE TEXT --- */
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        
+        .hero__inner { 
+            text-align: center; 
+            padding-block: 5rem; 
+            display: flex; 
+            justify-content: center;
+        }
+
+        .hero__title { 
+            font-size: 3rem; 
+            margin: 20px 0; 
+            font-weight: 900; 
+            line-height: 1.1; 
+        }
+
+        .text-cyan { color: var(--color-cyan); }
+
+        .hero__subtitle { 
+            font-size: 1.2rem; 
+            color: rgba(255,255,255,0.7); 
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            padding: 6px 16px;
+            background: rgba(0, 212, 245, 0.1);
+            border: 1px solid rgba(0, 212, 245, 0.2);
+            border-radius: 100px;
+            color: var(--color-cyan);
+            font-weight: 700;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+        }
+
+        .badge--dot::before {
+            content: '';
+            width: 8px;
+            height: 8px;
+            background: var(--color-cyan);
+            border-radius: 50%;
+            margin-right: 10px;
+            box-shadow: 0 0 10px var(--color-cyan);
+        }
+        /* ------------------------------------------ */
+
         /* SECTION STYLING */
         .founder { 
             background: #111111; 
@@ -69,15 +120,6 @@
         .dot-large { width: 48px; height: 48px; border-radius: 50%; background: linear-gradient(135deg, var(--color-cyan), #0098b8); flex-shrink: 0; box-shadow: 0 0 0 2px var(--color-bg), 0 0 0 4px rgba(0,212,245,0.25); }
         .sig-name { font-weight: 800; font-size: 1rem; color: var(--color-white); letter-spacing: -0.01em; margin-bottom: 0.2rem; }
         .sig-role { color: rgba(255,255,255,0.6); font-size: 0.85rem; }
-
-        /* LISTS */
-        .policy-list { list-style: none; padding: 0; margin-top: 20px; }
-        .policy-list li { margin-bottom: 15px; padding-left: 30px; position: relative; }
-        .policy-list li::before { content: '✔'; color: var(--color-cyan); position: absolute; left: 0; font-weight: bold; }
-
-        /* BUTTONS */
-        .btn-download { background: var(--color-cyan); color: #000; padding: 1rem 2.5rem; border-radius: 50px; text-decoration: none; font-weight: 800; text-transform: uppercase; display: inline-block; margin-top: 40px; transition: 0.3s; border: none; cursor: pointer; }
-        .btn-download:hover { box-shadow: 0 0 20px var(--color-cyan); transform: scale(1.02); }
     </style>
 </head>
 
@@ -97,22 +139,24 @@
             <a href="#agreement" style="color: #00d4f5; text-decoration: none; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;">Service Agreement</a>
         </div>
     </nav>
- <div class="container hero__inner">
-        <div class="hero__content">
-          <span class="badge badge--dot" data-aos="fade-down" data-aos-delay="0">Built for Fairness</span>
 
-          <h1 class="hero__title" data-aos="fade-up" data-aos-delay="100">
-            No Tips. No Surprises.
+    <!-- NEW HEADER SECTION (NOW STYLED CORRECTLY) -->
+    <div class="container hero__inner">
+        <div class="hero__content">
+          <span class="badge badge--dot">Built for Fairness</span>
+
+          <h1 class="hero__title">
+            No Tips. No Surprises.<br>
             <span class="text-cyan">Just Better Rides.</span>
           </h1>
 
-          <p class="hero__subtitle" data-aos="fade-up" data-aos-delay="200">
+          <p class="hero__subtitle">
              Book rides with transparent pricing at competitive rates, where drivers earn a living wage.<br />
-          YOUR DRIVER WILL THANK YOU , YOUR WALLET WILL TOO !
+             <strong>YOUR DRIVER WILL THANK YOU, YOUR WALLET WILL TOO!</strong>
           </p>
         </div>
- </div>
-</div>  
+    </div>
+
     <!-- SECTION 1: FOUNDER'S LETTER -->
     <section class="founder" id="founder">
         <div class="founder__inner">
@@ -132,19 +176,11 @@
                         <p>Because you are paid fairly, we’ve removed tipping entirely from the Apps. When they ride with us, the price they see is the total price they pay. We call it <span style="color: var(--color-cyan);">Zero-Friction Travel</span>.</p>
                         <p>We are launching here in <strong>London</strong> on July 1st because this is our home. Our mission is to prove that a rideshare company can be both a sophisticated platform and a fair local partner.</p>
                     </div>
-                    <div class="sig-block">
-                        <div class="dot-large"></div>
-                        <div>
-                            <div class="sig-name">The Founder</div>
-                            <div class="sig-role">CEO & Co-founder, Totali</div>
-                        </div>
-                    </div>
-                    <div style="text-align: center;"><a href="#bill-of-rights" class="btn-download" style="background: transparent; border: 1px solid var(--color-cyan); color: var(--color-cyan);">Next: Bill of Rights</a></div>
                 </div>
             </div>
         </div>
     </section>
-
+    
     <!-- SECTION 2: TEMPLATE FOR OTHER POLICIES (Copy this for Ratings, Safety, etc.) -->
     <section class="founder" id="bill-of-rights">
         <div class="founder__inner">
