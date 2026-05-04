@@ -120,6 +120,34 @@
         .dot-large { width: 48px; height: 48px; border-radius: 50%; background: linear-gradient(135deg, var(--color-cyan), #0098b8); flex-shrink: 0; box-shadow: 0 0 0 2px var(--color-bg), 0 0 0 4px rgba(0,212,245,0.25); }
         .sig-name { font-weight: 800; font-size: 1rem; color: var(--color-white); letter-spacing: -0.01em; margin-bottom: 0.2rem; }
         .sig-role { color: rgba(255,255,255,0.6); font-size: 0.85rem; }
+
+        /* --- DOWNLOAD BUTTON STYLING --- */
+.btn-download { 
+    background: var(--color-cyan); 
+    color: #000000 !important; /* Forces text to be black for contrast */
+    padding: 1rem 2.5rem; 
+    border-radius: 50px; 
+    text-decoration: none; 
+    font-weight: 800; 
+    text-transform: uppercase; 
+    display: inline-block; 
+    margin-top: 40px; 
+    transition: 0.3s; 
+    border: none; 
+    cursor: pointer;
+    letter-spacing: 1px;
+}
+
+.btn-download:hover { 
+    box-shadow: 0 0 25px var(--color-cyan); 
+    transform: scale(1.05);
+    background: #ffffff; /* Turns white on hover for a cool effect */
+}
+
+/* Also ensure the list style is present for your "Commitment" section */
+.policy-list { list-style: none; padding: 0; margin-top: 20px; }
+.policy-list li { margin-bottom: 15px; padding-left: 30px; position: relative; }
+.policy-list li::before { content: '✔'; color: var(--color-cyan); position: absolute; left: 0; font-weight: bold; }
     </style>
 </head>
 
