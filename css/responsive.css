@@ -607,3 +607,29 @@
     transform: none !important;
   }
 }
+/* ============================================================
+   BUTTON POLISH OVERRIDE (Ensures Cyan/Green Glow)
+   ============================================================ */
+
+.store-btn {
+    background: linear-gradient(135deg, #00FFFF 0%, #34A853 100%) !important;
+    border: none !important;
+    color: #000000 !important;
+    box-shadow: 0 4px 15px rgba(0, 255, 255, 0.4) !important;
+    display: inline-flex !important;
+    text-decoration: none !important;
+}
+
+/* Force icons and text to black for high visibility */
+.store-btn span strong, 
+.store-btn span small,
+.store-btn svg,
+.store-btn--apple svg {
+    color: #000000 !important;
+    fill: #000000 !important;
+}
+
+.store-btn:hover {
+    transform: translateY(-3px) !important;
+    filter: brightness(1.1) !important;
+}
