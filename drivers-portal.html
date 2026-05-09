@@ -621,50 +621,35 @@
             </div>
         </div>
     </section>
-<!-- UPDATED ACCORDION SCRIPT: CLOSES OTHERS WHEN ONE OPENS -->
 <script>
-    const form = document.getElementById("paa-form");
-    const paaLink = document.getElementById('paa-link');
-    const checkbox = document.getElementById('agree-checkbox');
-    const submitBtn = document.getElementById('submit-btn');
+document.addEventListener('DOMContentLoaded', function() {
+    const accordionTriggers = document.querySelectorAll('.accordion__trigger');
 
-    // 1. Force PDF open first
-    paaLink.addEventListener('click', () => {
-        checkbox.disabled = false;
-        paaLink.innerHTML = "PAA Document Opened ✓";
-    });
+    accordionTriggers.forEach(trigger => {
+        trigger.addEventListener('click', function() {
+            const parent = this.parentElement;
+            const body = parent.querySelector('.accordion__body');
+            const isOpen = body.classList.contains('open');
 
-    // 2. Unlock button on check
-    checkbox.addEventListener('change', () => {
-        submitBtn.disabled = !checkbox.checked;
-        submitBtn.style.opacity = checkbox.checked ? "1" : "0.4";
-    });
+            // Close all other open accordion items
+            document.querySelectorAll('.accordion__body').forEach(item => {
+                item.classList.remove('open');
+                item.style.display = 'none';
+            });
+            document.querySelectorAll('.accordion__trigger').forEach(btn => {
+                btn.setAttribute('aria-expanded', 'false');
+            });
 
-    // 3. THE MAGIC FIX: AJAX Submission
-    form.addEventListener("submit", async function(event) {
-        event.preventDefault(); // This stops the page from jumping to Formspree
-        submitBtn.innerHTML = "Signing...";
-        submitBtn.disabled = true;
-
-        const data = new FormData(event.target);
-        
-        fetch(event.target.action, {
-            method: 'POST',
-            body: data,
-            headers: { 'Accept': 'application/json' }
-        }).then(response => {
-            if (response.ok) {
-                // Take them to your thanks page directly
-                window.location.href = "https://ka7450gmail.github.io/totali-web/thanks.html";
-            } else {
-                alert("Something went wrong. Please try again.");
-                submitBtn.innerHTML = "Digitally Sign & Agree";
-                submitBtn.disabled = false;
+            // If it wasn't open, open it now
+            if (!isOpen) {
+                body.classList.add('open');
+                body.style.display = 'block';
+                this.setAttribute('aria-expanded', 'true');
             }
-        }).catch(error => {
-            alert("Connection error. Check your internet.");
         });
     });
+});
 </script>
 </body>
 </html>
+
