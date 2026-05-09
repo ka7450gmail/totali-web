@@ -222,7 +222,64 @@
         <a href="#driver-faq" style="color: #00d4f5; text-decoration: none; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;">FAQ</a>
     </div>
 </nav>
+<!-- FLOATING BACK BUTTON -->
+<a href="index.html" class="shimmer-back-btn">
+   <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/>
+   </svg>
+   <span>Back</span>
+</a>
 
+<style>
+.shimmer-back-btn {
+    position: fixed; /* Keeps it visible as you scroll */
+    top: 90px;      /* Adjust this to sit right below your navbar */
+    left: 20px;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.8rem;
+    padding: 10px 18px;
+    border-radius: 30px;
+    border: 1px solid rgba(0, 255, 255, 0.3);
+    
+    /* THE SHIMMER EFFECT */
+    background: linear-gradient(135deg, #00FFFF 0%, #34A853 50%, #00FFFF 100%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shimmerShift 3s linear infinite;
+    
+    /* BLURRY BACKGROUND BOX */
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+
+.shimmer-back-btn:hover {
+    transform: translateX(-5px);
+    border-color: var(--color-cyan);
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+}
+
+@keyframes shimmerShift {
+    to { background-position: 200% center; }
+}
+
+/* Mobile Adjustment */
+@media (max-width: 768px) {
+    .shimmer-back-btn {
+        top: 80px; 
+        left: 10px;
+        padding: 8px 14px;
+    }
+}
+</style>
     <!-- NEW HEADER SECTION (NOW STYLED CORRECTLY) -->
     <div class="container hero__inner">
         <div class="hero__content">
