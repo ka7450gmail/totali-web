@@ -3013,3 +3013,31 @@ main {
     height: auto !important; 
     padding: 5px 0 !important;  /* Adjust these 5px to 0px if you want zero gap */
 }
+  /* --- VIBRANT GRADIENT STORE BUTTONS --- */
+.store-btn {
+    background: linear-gradient(135deg, #00FFFF 0%, #34A853 100%) !important;
+    border: none !important;
+    color: #000000 !important;
+    transition: all 0.3s ease !important;
+    box-shadow: 0 4px 15px rgba(0, 255, 255, 0.2);
+    display: inline-flex !important;
+    align-items: center;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+.store-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 255, 255, 0.4);
+    filter: brightness(1.1);
+}
+
+/* Force text and icons to black for contrast */
+.store-btn span strong, 
+.store-btn span small,
+.store-btn svg,
+.store-btn--apple svg {
+    color: #000000 !important;
+    fill: #000000 !important;
+}
