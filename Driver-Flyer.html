@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Totali Recruitment Flyer - Print Version</title>
+    <!-- Use your existing Google Fonts -->
+    <link href="https://googleapis.com" rel="stylesheet">
+    
+    <style>
+        :root {
+            --cyan: #00f2ff;
+            --dark: #000000;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: white; /* White background to save your printer ink! */
+            color: black;
+            text-align: center;
+        }
+        .flyer-container {
+            width: 8.5in;
+            height: 11in;
+            margin: 0 auto;
+            padding: 40px;
+            box-sizing: border-box;
+            border: 10px solid var(--dark);
+            position: relative;
+        }
+        .header {
+            background: var(--dark);
+            color: white;
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+        .header h1 { font-size: 4rem; margin: 0; font-weight: 900; letter-spacing: -2px; }
+        .header p { font-size: 1.5rem; color: var(--cyan); margin: 0; font-weight: 700; text-transform: uppercase; }
+
+        .benefit-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            text-align: left;
+            margin-bottom: 40px;
+        }
+        .benefit-item {
+            padding: 15px;
+            border-bottom: 2px solid #eee;
+        }
+        .benefit-item h3 { font-size: 1.4rem; margin: 0 0 5px 0; color: var(--dark); }
+        .benefit-item p { margin: 0; color: #555; line-height: 1.4; }
+
+        .qr-section {
+            margin-top: 50px;
+            padding: 30px;
+            background: #f9f9f9;
+            border-radius: 20px;
+        }
+        .qr-placeholder {
+            width: 200px;
+            height: 200px;
+            margin: 0 auto 15px;
+            border: 2px dashed #ccc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .qr-placeholder img { width: 100%; height: auto; }
+
+        .footer {
+            position: absolute;
+            bottom: 40px;
+            width: calc(100% - 80px);
+            font-weight: 700;
+            font-size: 1.2rem;
+            border-top: 1px solid #eee;
+            padding-top: 20px;
+        }
+
+        /* PRINT SETTINGS */
+        @media print {
+            .flyer-container { border: none; width: 100%; height: auto; padding: 0; }
+            button { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="flyer-container">
+        <div class="header">
+            <h1>TOTALI</h1>
+            <p>The 70/30 Revolution is Here</p>
+        </div>
+
+        <div class="benefit-grid">
+            <div class="benefit-item">
+                <h3>Keep 70% Guaranteed</h3>
+                <p>We capped our platform fee. You keep 70% of every fare, 100% of the time.</p>
+            </div>
+            <div class="benefit-item">
+                <h3>No-Tips Rideshare™</h3>
+                <p>Better math means you don't rely on the uncertainty of tips to make a living.</p>
+            </div>
+            <div class="benefit-item">
+                <h3>$2M Insurance</h3>
+                <p>Primary commercial coverage while engaged. Your safety is our standard.</p>
+            </div>
+            <div class="benefit-item">
+                <h3>London's Own</h3>
+                <p>Built in London, Ontario for local drivers who deserve a dignified wage.</p>
+            </div>
+        </div>
+
+        <div class="qr-section">
+            <div class="qr-placeholder">
+                <!-- Replace with your actual QR code image path once you save it -->
+                <img src="assets/images/qr-driver-portal.png" alt="Scan to Join">
+            </div>
+            <h2>SCAN TO START</h2>
+            <p>Review the Platform Access Agreement & Sign Online</p>
+        </div>
+
+        <div class="footer">
+            WWW.TOTALIRIDES.CA
+        </div>
+    </div>
+
+    <button onclick="window.print()" style="position: fixed; top: 20px; right: 20px; padding: 15px 30px; background: #00f2ff; border: none; font-weight: bold; cursor: pointer; border-radius: 50px; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
+        🖨️ PRINT FLYER
+    </button>
+
+</body>
+</html>
