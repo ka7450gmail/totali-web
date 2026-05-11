@@ -2,45 +2,44 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Totali Lamination - Final Pro Version</title>
+    <title>Totali Lamination - Final Version</title>
     <link href="https://googleapis.com" rel="stylesheet">
     <style>
-        :root { --cyan: #00f2ff; --dark: #000000; }
+        :root { --brand-color: #00f2ff; --dark: #000000; }
         body { font-family: 'Inter', sans-serif; margin: 0; background: #333; display: flex; justify-content: center; }
         .flyer-page {
             width: 8.5in; height: 11in;
             background: var(--dark); color: white;
-            padding: 50px 40px; box-sizing: border-box;
+            padding: 60px 40px; box-sizing: border-box;
             display: flex; flex-direction: column;
             align-items: center; text-align: center;
         }
-        /* Top Section - Maximum Impact */
-        .top-section { margin-bottom: 30px; }
+        /* Top Section */
+        .top-section { margin-bottom: 20px; }
         .top-section h1 { 
             font-size: 5.2rem; margin: 0; font-weight: 900; 
             line-height: 0.9; text-transform: uppercase; 
         }
-        .text-cyan { color: var(--cyan); }
+        .text-brand { color: var(--brand-color); }
 
-        /* QR Section - Raised up */
-        .qr-section { background: white; padding: 25px; border-radius: 20px; margin: 30px 0; }
-        .qr-section img { width: 340px; height: 340px; display: block; }
+        /* QR Section - Clean & High */
+        .qr-section { background: white; padding: 25px; border-radius: 20px; margin: 40px 0; }
+        .qr-section img { width: 360px; height: 360px; display: block; }
 
-        /* Bottom Section - Alternating Colors per your request */
-        .bottom-section { margin-top: auto; width: 100%; padding-bottom: 30px; }
+        /* Bottom Section - Exact Wording & Colors */
+        .bottom-section { margin-top: auto; width: 100%; padding-bottom: 40px; text-transform: uppercase; }
         
-        .line-1 { font-size: 2.8rem; font-weight: 900; margin-bottom: 20px; text-transform: uppercase; }
+        /* Line 1: White / Cyan */
+        .line-1 { font-size: 3rem; font-weight: 900; margin-bottom: 15px; }
         
-        .line-2 { font-size: 3.2rem; font-weight: 900; margin-bottom: 20px; display: flex; align-items: center; justify-content: center; }
-        .no-tips-box { 
-            background: var(--cyan); color: black; padding: 5px 15px; 
-            margin-right: 15px; border-radius: 4px; text-transform: uppercase; 
-        }
+        /* Line 2: Cyan / White */
+        .line-2 { font-size: 3.2rem; font-weight: 900; margin-bottom: 25px; }
         
-        .line-3 { font-size: 2.5rem; font-weight: 900; letter-spacing: 2px; color: #fff; }
+        /* Line 3: White & Smaller */
+        .line-3 { font-size: 2.2rem; font-weight: 900; letter-spacing: 2px; }
 
         @media print { .btn-print { display: none; } .flyer-page { width: 100%; height: 100vh; } }
-        .btn-print { position: fixed; top: 20px; right: 20px; padding: 15px 30px; background: var(--cyan); color: black; border: none; font-weight: 900; border-radius: 50px; cursor: pointer; }
+        .btn-print { position: fixed; top: 20px; right: 20px; padding: 15px 30px; background: var(--brand-color); color: black; border: none; font-weight: 900; border-radius: 50px; cursor: pointer; }
     </style>
 </head>
 <body>
@@ -48,7 +47,7 @@
     <div class="flyer-page">
         <div class="top-section">
             <h1>SCAN TO JOIN</h1>
-            <h1 class="text-cyan">LONDON'S 70/30</h1>
+            <h1 class="text-brand">LONDON'S 70/30</h1>
             <h1>REVOLUTION</h1>
         </div>
 
@@ -57,12 +56,13 @@
         </div>
 
         <div class="bottom-section">
-            <div class="line-1">STOP TIPPING. <span class="text-cyan">START SAVING.</span></div>
+            <!-- Line 1: White STOP TIPPING, Cyan START SAVING -->
+            <div class="line-1">STOP TIPPING, <span class="text-brand">START SAVING.</span></div>
             
-            <div class="line-2">
-                <span class="no-tips-box">NO TIPS</span> RIDESHARE PLATFORM
-            </div>
+            <!-- Line 2: Cyan THE NO TIPS, White RIDESHARE -->
+            <div class="line-2"><span class="text-brand">THE NO TIPS</span> RIDESHARE</div>
             
+            <!-- Line 3: White WWW.TOTALIRIDES.CA -->
             <div class="line-3">WWW.TOTALIRIDES.CA</div>
         </div>
     </div>
