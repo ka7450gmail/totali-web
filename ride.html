@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get the Totali Rides App</title>
+    <!-- Same Inter font as your homepage -->
+    <link href="https://googleapis.com" rel="stylesheet">
+    <style>
+        :root {
+            --cyan: #00f2ff;
+            --black: #050505;
+        }
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            background-color: var(--black);
+            font-family: 'Inter', sans-serif;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        .container {
+            padding: 20px;
+            max-width: 400px;
+            width: 90%;
+        }
+        .logo {
+            width: 120px;
+            margin-bottom: 30px;
+        }
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 900;
+            margin-bottom: 10px;
+            line-height: 1.1;
+        }
+        .highlight { color: var(--cyan); }
+        
+        p {
+            font-size: 1.1rem;
+            color: #ccc;
+            margin-bottom: 40px;
+        }
+
+        .btn {
+            display: block;
+            background: white;
+            color: black;
+            text-decoration: none;
+            padding: 18px;
+            border-radius: 12px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            transition: transform 0.2s;
+        }
+        .btn--google {
+            background: #222;
+            color: white;
+            border: 1px solid #444;
+        }
+        .btn:active { transform: scale(0.98); }
+
+        .footer-link {
+            margin-top: 30px;
+            display: block;
+            color: #666;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Make sure logo.png is in your assets/images folder -->
+        <img src="assets/images/logo.png" alt="Totali Rides" class="logo">
+        
+        <h1>Stop Tipping. <br><span class="highlight">Start Saving.</span></h1>
+        <p>Download the app to book your first <br>no-tip ride in London.</p>
+
+        <!-- Replace '#' with your app store links when ready -->
+        <a href="#" class="btn">Download for iPhone</a>
+        <a href="#" class="btn btn--google">Download for Android</a>
+
+        <a href="index.html" class="footer-link">Back to totalirides.ca</a>
+    </div>
+
+</body>
+</html>
