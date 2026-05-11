@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Totali Lamination - Rider Version</title>
+    <link href="https://googleapis.com" rel="stylesheet">
+    <style>
+        :root {
+            --cyan: #00f2ff;
+            --dark: #000000; /* Set to pure black to match most logos */
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0; padding: 0;
+            background: #f0f0f0;
+            display: flex; justify-content: center;
+        }
+        .flyer-page {
+            width: 8.5in; height: 11in;
+            background: var(--dark);
+            color: white;
+            padding: 60px;
+            display: flex; flex-direction: column;
+            align-items: center; text-align: center;
+        }
+        .logo-header {
+            margin-bottom: 40px;
+            border-bottom: 3px solid var(--cyan);
+            padding-bottom: 20px;
+            width: 100%;
+        }
+        .logo-img { width: 400px; height: auto; }
+        
+        .hook-text {
+            font-size: 2.2rem;
+            color: var(--cyan);
+            font-weight: 900;
+            text-transform: uppercase;
+            margin-top: 10px;
+        }
+
+        .qr-section {
+            background: white;
+            padding: 30px;
+            border-radius: 25px;
+            margin: 40px 0;
+        }
+        .qr-placeholder {
+            width: 300px; height: 300px;
+            border: 1px solid #ccc;
+            display: flex; align-items: center; justify-content: center;
+            color: black; font-weight: bold;
+        }
+
+        .footer-cta { margin-top: auto; width: 100%; }
+        .line-1 { font-size: 2.5rem; font-weight: 700; margin-bottom: 10px; }
+        .line-2 { 
+            font-size: 3rem; font-weight: 900; color: var(--cyan); 
+            text-transform: uppercase; border: 4px solid var(--cyan);
+            padding: 10px 20px; display: inline-block; margin-bottom: 20px;
+        }
+        .line-3 { font-size: 2.8rem; font-weight: 900; }
+
+        @media print {
+            body { background: white; }
+            .flyer-page { width: 100%; height: 100vh; }
+            .btn-print { display: none; }
+        }
+        .btn-print {
+            position: fixed; top: 20px; right: 20px;
+            padding: 15px 30px; background: var(--cyan);
+            color: black; border: none; font-weight: 900;
+            border-radius: 50px; cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <button class="btn-print" onclick="window.print()">🖨️ PRINT LAMINATION</button>
+
+    <div class="flyer-page">
+        <div class="logo-header">
+            <!-- Pulling your original working logo -->
+            <img src="assets/images/logo.png" alt="Totali Rides" class="logo-img">
+            <div class="hook-text">London’s 70/30 Revolution</div>
+        </div>
+
+        <div class="qr-section">
+            <div class="qr-placeholder">
+                <!-- Once you have the QR, replace this <img> tag -->
+                <img src="assets/images/qr-rider-app.png" alt="SCAN TO JOIN" style="width:100%">
+            </div>
+        </div>
+
+        <div class="footer-cta">
+            <div class="line-1">Stop Tipping. Start Saving.</div>
+            <div class="line-2">The NO TIPS Rideshare Platform</div>
+            <div class="line-3">WWW.TOTALIRIDES.CA</div>
+        </div>
+    </div>
+
+</body>
+</html>
