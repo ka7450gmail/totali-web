@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Totali - Driver Fact Sheet</title>
+    <link href="https://googleapis.com" rel="stylesheet">
+    <style>
+        :root { --cyan: #00bcd4; --dark: #1a1a1a; }
+        body { font-family: 'Inter', sans-serif; background: #fff; color: var(--dark); padding: 40px; line-height: 1.4; }
+        .sheet { max-width: 8.5in; margin: auto; border: 2px solid #000; padding: 40px; position: relative; }
+        
+        .header { border-bottom: 4px solid var(--cyan); padding-bottom: 10px; margin-bottom: 30px; display: flex; justify-content: space-between; align-items: flex-end; }
+        h1 { font-size: 2.2rem; font-weight: 900; margin: 0; text-transform: uppercase; letter-spacing: -1px; }
+        .version { font-weight: 700; color: var(--cyan); text-transform: uppercase; font-size: 0.9rem; }
+
+        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-bottom: 30px; }
+        .fact-box { border-left: 4px solid #000; padding-left: 15px; }
+        .fact-box h3 { font-size: 1.1rem; font-weight: 900; margin: 0 0 5px 0; text-transform: uppercase; color: var(--cyan); }
+        .fact-box p { margin: 0; font-size: 0.95rem; font-weight: 500; }
+
+        .bill-of-rights { background: #f9f9f9; padding: 25px; border: 1px solid #ddd; border-radius: 8px; margin-bottom: 30px; }
+        .bill-of-rights h2 { font-size: 1.4rem; font-weight: 900; margin: 0 0 15px 0; text-align: center; text-transform: uppercase; }
+        .rights-list { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+        .right-item { font-size: 0.85rem; display: flex; align-items: flex-start; }
+        .right-item:before { content: "✓"; color: var(--cyan); font-weight: 900; margin-right: 8px; }
+
+        .footer { text-align: center; border-top: 2px solid #000; padding-top: 20px; font-weight: 900; font-size: 1.3rem; }
+        .footer span { color: var(--cyan); }
+
+        @media print { .btn-print { display: none; } body { padding: 0; } .sheet { border: none; } }
+        .btn-print { position: fixed; top: 20px; right: 20px; padding: 12px 24px; background: #000; color: #fff; border: none; font-weight: bold; border-radius: 50px; cursor: pointer; }
+    </style>
+</head>
+<body>
+
+<button class="btn-print" onclick="window.print()">🖨️ PRINT FACT SHEET</button>
+
+<div class="sheet">
+    <div class="header">
+        <h1>Driver Fact Sheet</h1>
+        <div class="version">London Founding Partner Brief</div>
+    </div>
+
+    <div class="grid">
+        <div class="fact-box">
+            <h3>The 70/30 Split</h3>
+            <p>Big Apps take 40-60%. Totali math is fixed: Your take is <strong>70% of every fare</strong>, every time. No status levels, no games.</p>
+        </div>
+        <div class="fact-box">
+            <h3>+44% More Income</h3>
+            <p>By removing "Tip Uncertainty" and increasing base pay, Totali drivers net approx. <strong>44% more money weekly</strong> than on Big Tech apps.</p>
+        </div>
+        <div class="fact-box">
+            <h3>Full Transparency</h3>
+            <p>See the <strong>exact drop-off address</strong>, total distance, and your guaranteed earnings <strong>before</strong> you hit accept.</p>
+        </div>
+        <div class="fact-box">
+            <h3>Zero Tip Fatigue</h3>
+            <p>Riders love Totali because they save on tips. Drivers love it because they don't rely on "charity" to pay their bills.</p>
+        </div>
+    </div>
+
+    <div class="bill-of-rights">
+        <h2>Your Bill of Rights</h2>
+        <div class="rights-list">
+            <div class="right-item"><strong>Human-First Ratings:</strong> No automated bot-deactivations.</div>
+            <div class="right-item"><strong>No-Bot Guarantee:</strong> Talk to a real person in London for disputes.</div>
+            <div class="right-item"><strong>Area Preferences:</strong> No time limits on your North London/Uni filters.</div>
+            <div class="right-item"><strong>Zero-Penalty Freedom:</strong> No punishment for your acceptance rate.</div>
+            <div class="right-item"><strong>Transparent Payouts:</strong> Automated weekly or Instant Cash via Stripe.</div>
+            <div class="right-item"><strong>Founding Voice:</strong> Your feedback builds the London app.</div>
+        </div>
+    </div>
+
+    <div class="footer">
+        Email: admin@totalirides.ca<span>WWW.TOTALIRIDES.CA</span>
+    </div>
+</div>
+
+</body>
+</html>
